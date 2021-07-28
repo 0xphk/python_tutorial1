@@ -40,9 +40,15 @@ print("print type")
 print(type(track2))
 
 # track2 variable references to same memory address as track1
-print("print references")
-print("track1")
+print(f"print references")
+print(f"track1")
 print(track1)
+
+print(f"# same as called method __str__ directly")
+print(track1.__str__())
+print(f"# prints the reference mem_addr as decimal representation id")
+print(id(track1))
+
 print("track2")
 print(track2)
 
