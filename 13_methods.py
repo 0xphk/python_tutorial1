@@ -31,7 +31,7 @@ class Label:
 
     # custom __lt__ method to compare attributes based on data
     def __lt__(self, other):
-        print(f"[debug:]>>> comparing {self} with {other}")
+        print(f"[debug:]>>> comparing '{self.spent}'' {self} with {other}")
         if self.spent != other.spent:
             return (self.spent < other.spent)
         else:
@@ -130,3 +130,5 @@ totals = [label1, label2]
 totals.sort()
 for i in totals:
     print(i)
+
+print()
