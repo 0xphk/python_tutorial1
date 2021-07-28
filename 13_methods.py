@@ -25,6 +25,10 @@ class Label:
         else:
             raise AttributeError(f"no attribute named {name}")
 
+    # set default resturn string if no arguments called
+    def __str__(self):
+        return f"{self.name} {self.spent}"
+
     # works as parameters are given
     def autobuy(self, amount, price):
         self.owned += amount
@@ -107,3 +111,7 @@ print(f"get 'total' attribute which does not exist")
 print(f"build attribute on the fly using __getattr__ condition")
 print('return f"{name} {spent}"\n')
 print(label1.total)
+
+# call default __str__ method which set 'total' as well
+print(f"call object with no args, default __str__ set to total")
+print(label1)
