@@ -7,8 +7,13 @@ class Label:
         self.releases = releases
         self.owned = int(owned)
         self.spent = int(spent)
-        self.amount = None
-        self.price = None
+        #self.amount = None
+        #self.price = None
+
+    def __setattr__(self, name, value):
+        # print special attributes stored in __dict__
+        print(f"[debug:]>>> {name} = {value}\n")
+        self.__dict__[name] = value
 
     # works as parameters are given
     def autobuy(self, amount, price):
@@ -21,10 +26,11 @@ class Label:
         self.price = label1.price
         self.owned += label1.amount
         self.spent += label1.price
-
-"""     def checkout(self):
+""" 
+    def checkout(self):
         self.owned += int(label1.amount)
-        self.spent += int(label1.price) """
+        self.spent += int(label1.price)
+"""
 
 # print __doc__ object if class description is given
 print(f"\n[debug:] Print class doc \'print(Label.__doc__)\'")
@@ -37,14 +43,14 @@ label2 = Label("othercide","100+", "\t1", "\t10")
 
 # print dictionary object as json
 """ print(f"[debug:] print given object as json")
-print(f"[debug:] label1:",label1.__dict__)
-print(f"[debug:] label2:",label2.__dict__,"\n") """
+print(f"[debug:] label1: {label1.__dict__})
+print(f"[debug:] label2:",{label2.__dict__}\n") """
 
 # print some attrs
 #print(" Label\t\t Releases\t Owned:\n\n",label1.name,"\t",label1.releases,"\t\t",label1.owned,"\n",label2.name,"\t",label2.releases,"\t\t",label2.owned,"\n")
 
 # print f method is little shorter and removes heading/trailing whitespaces
-print(f"Label\t\tReleases\tOwned\t\tSpent:\n\n{label1.name}\t{label1.releases}\t\t{label1.owned}\t\t{label1.spent}\n{label2.name}\t{label2.releases}\t\t{label2.owned}\t\t{label1.spent}\n")
+print(f"Label\t\tReleases\tOwned\t\tSpent:\n\n{label1.name}\t{label1.releases}\t\t{label1.owned}\t\t{label1.spent}\n{label2.name}\t{label2.releases}\t\t{label2.owned}\t\t{label2.spent}\n")
 
 # print attrs before buy
 print(f"base values:")
@@ -81,9 +87,7 @@ print(f"\nvalues after increment label1.owned parameter in label1.buy() method")
 print(f"{label1.name} owned: {label1.owned} spent total: {label1.spent}")
 print(f"{label2.name} owned: {label2.owned} spent total: {label2.spent}\n")
 
-"""
 # print dictionary object as json
-print(f"[debug:] print given object as json")
-print(f"[debug:] label1: {label1.__dict__}")
-print(f"[debug:] label2: {label2.__dict__}\n")
-"""
+print(f"[debug:] print given objects as json, note additional fields")
+print(f"[debug:] {label1.__dict__}")
+print(f"[debug:] {label2.__dict__}\n")
