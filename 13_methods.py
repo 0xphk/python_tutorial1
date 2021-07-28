@@ -10,10 +10,20 @@ class Label:
         #self.amount = None
         #self.price = None
 
+    # useful for debug printing every set argument value 
     def __setattr__(self, name, value):
         # print special attributes stored in __dict__
         print(f"[debug:]>>> {name} = {value}\n")
         self.__dict__[name] = value
+
+    def __getattr__(self, name):
+        # print special attributes stored in __dict__
+        print(f"[debug:]>>> get the '{name}' attribute")
+        # build return values based on condition or raise error
+        if name == 'total':
+            return f"{self.name} {self.spent}"
+        else:
+            raise AttributeError(f"no attribute named {name}")
 
     # works as parameters are given
     def autobuy(self, amount, price):
@@ -91,3 +101,9 @@ print(f"{label2.name} owned: {label2.owned} spent total: {label2.spent}\n")
 print(f"[debug:] print given objects as json, note additional fields")
 print(f"[debug:] {label1.__dict__}")
 print(f"[debug:] {label2.__dict__}\n")
+
+# __getattr__ method
+print(f"get 'total' attribute which does not exist")
+print(f"build attribute on the fly using __getattr__ condition")
+print('return f"{name} {spent}"\n')
+print(label1.total)
