@@ -2,7 +2,6 @@ print("# range iteration as function")
 def iterate():
     for i in range(1, 10):
         print(i)
-
 iterate()
 
 print("age verify as function")
@@ -21,11 +20,14 @@ def compare_age():
 compare_age()
 
 # parameters to functions
-print('use function parameter "name"')
+print('use hello(name) function parameter "name"')
 def hello(name):
     print("hello", name)
+# calls function with parameter, returns output
 hello("phk")
 
+# calls function with parameter, returns output + default NoneType return value
+print("# calls function with parameter, returns output + NoneType return value")
 print(hello("name_here"))
 print(type(hello("name_here")))
 
@@ -35,7 +37,6 @@ name = str(input("enter name: "))
 age = int(input("enter age: "))
 def hello(name, age):
     print("name, age:", name,",", age)
-    #return age
 hello(name, age)
 
 # determine max value from inputs
