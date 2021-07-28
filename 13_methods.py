@@ -121,7 +121,7 @@ print('return f"{name} {spent}"\n')
 print(label1.total)
 
 # call default __str__ method which set 'total' as well
-print(f"[debug:] call object with no args, default __str__ set to total which outputs the same")
+print(f"\n[debug:] call object with no args, default __str__ set to 'total' which outputs the same")
 print(label1)
 
 # sort stuff
