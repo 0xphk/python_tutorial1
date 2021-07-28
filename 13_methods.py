@@ -13,7 +13,7 @@ class Label:
     # useful for debug printing every set argument value 
     def __setattr__(self, name, value):
         # print special attributes stored in __dict__
-        print(f"[debug:]>>> {name} = {value}\n")
+        #print(f"[debug:]>>> {name} = {value}\n")
         self.__dict__[name] = value
 
     def __getattr__(self, name):
@@ -28,6 +28,14 @@ class Label:
     # set default resturn string if no arguments called
     def __str__(self):
         return f"{self.name} {self.spent}"
+
+    # custom __lt__ method to compare attributes based on data
+    def __lt__(self, other):
+        print(f"[debug:]>>> comparing {self} with {other}")
+        if self.spent != other.spent:
+            return (self.spent < other.spent)
+        else:
+            return (self.amount < other.amount)
 
     # works as parameters are given
     def autobuy(self, amount, price):
@@ -74,7 +82,7 @@ print(f"{label1.name} owned: {label1.owned} spent total: {label1.spent}")
 print(f"{label2.name} owned: {label2.owned} spent total: {label2.spent}\n")
 
 # call function, change attributes
-print(f"[call: ] label1.autobuy(), label2.autobuy() 1 critical for 10, buy 2 othercide for 36\n")
+print(f"[call: ]>>> label1.autobuy(), label2.autobuy() 1 critical for 10, buy 2 othercide for 36\n")
 label1.autobuy(1,10)
 label2.autobuy(2,36)
 
@@ -102,9 +110,9 @@ print(f"{label1.name} owned: {label1.owned} spent total: {label1.spent}")
 print(f"{label2.name} owned: {label2.owned} spent total: {label2.spent}\n")
 
 # print dictionary object as json
-print(f"[debug:] print given objects as json, note additional fields")
-print(f"[debug:] {label1.__dict__}")
-print(f"[debug:] {label2.__dict__}\n")
+#print(f"[debug:] print given objects as json, note additional fields")
+#print(f"[debug:] {label1.__dict__}")
+#print(f"[debug:] {label2.__dict__}\n")
 
 # __getattr__ method
 print(f"get 'total' attribute which does not exist")
@@ -113,5 +121,12 @@ print('return f"{name} {spent}"\n')
 print(label1.total)
 
 # call default __str__ method which set 'total' as well
-print(f"call object with no args, default __str__ set to total")
+print(f"[debug:] call object with no args, default __str__ set to total which outputs the same")
 print(label1)
+
+# sort stuff
+print(f"\nsort stuff using __lt__ special method")
+totals = [label1, label2]
+totals.sort()
+for i in totals:
+    print(i)
