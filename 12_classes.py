@@ -39,7 +39,7 @@ track2 = track1
 print("print type")
 print(type(track2))
 
-# references to same memory addr
+# track2 variable references to same memory address as track1
 print("print references")
 print("track1")
 print(track1)
@@ -51,9 +51,43 @@ print("track2")
 print("track2:", track2.artist, "-", track2.title, "/", track2.year)
 
 class Label:
-    def __init__(self, name, releases):
+    def __init__(self, name, releases, owned, spent):
         self.name = name
         self.releases = releases
-label1 = Label("critical", "over 100")
-label2 = Label("othercide","maybe 100")
-print("Lables - Releases:\n",label1.name, label1.releases,"\n",label2.name, label2.releases)
+        self.owned = int(owned)
+        self.spent = int(spent)
+    def buy(self, amount, price):
+        self.owned += int(amount)
+        self.spent += int(price)
+    # does not work yet
+"""     def buy2(self):
+        self.amount = int(input("amount: "))
+        self.price = int(input("price: "))
+        self.owned += int(amount)
+        self.spent += int(price) """
+
+# set attributes for object
+label1 = Label("critical", "100+", "10", "100")
+label2 = Label("othercide","100+", "1", "10")
+
+# print some attrs
+print("\nLables - Releases:\n",label1.name, label1.releases, label1.owned,"\n",label2.name, label2.releases, label2.owned,"\n")
+
+# print attrs before buy
+print("base values:")
+print(label1.name,"owned:",label1.owned,"spent total:",label1.spent)
+print(label2.name,"owned:",label2.owned,"spent total:",label2.spent)
+
+# call function, change attributes
+print("buy 1 critical for 10, buy 2 othercide for 36")
+label1.buy(1,10)
+label2.buy(2,36)
+
+# does not work yet
+#print("how much to buy?")
+#label1.buy2()
+
+# after buy
+print("values after increment buy parameter in buy() method")
+print(label1.name,"owned:",label1.owned,"spent total:",label1.spent)
+print(label2.name,"owned:",label2.owned,"spent total:",label2.spent)
