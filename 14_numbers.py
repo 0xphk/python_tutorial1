@@ -29,11 +29,19 @@ print()
 #print("get type:", type(y))
 
 # square / squareroot syntax
-print('''calculate square of n 'n²' using x = n ** 2
->>> n = 5
->>> x = n ** 2
->>> x
-25''')
+print('''calculate square of x 'x² / x^2' using x ** 2
+
+# using x ** n (x^n) square n = 2
+>>> n = 2
+>>> x = 5
+>>> y = x ** n
+>>> y
+25
+
+# using module pow(x, n)
+>>> pow(x, n)
+25
+''')
 
 # python2+3 - complex
 # use 'j' suffix to set complex numbers ('i' is 'j' in python) j = sqrt(-1+0j)
