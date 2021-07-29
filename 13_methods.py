@@ -1,6 +1,6 @@
 # more variable methods in classes
 class Label:
-    # add class.__doc__ 
+    # add class.__doc__
     """methods in classes w/ positional arguments"""
     def __init__(self, name, releases, owned, spent):
         self.name = name
@@ -10,7 +10,7 @@ class Label:
         #self.amount = None
         #self.price = None
 
-    # useful for debug printing every set argument value 
+    # useful for debug printing every set argument value
     def __setattr__(self, name, value):
         # print special attributes stored in __dict__
         #print(f"[debug:]>>> {name} = {value}\n")
@@ -59,7 +59,7 @@ print(f"[debug:] {Label.__doc__}\n")
 # set attributes for object
 print(f"set default values \'label1.name, label1.releases, label1.owned, label1.spent\'\n")
 label1 = Label("critical", "100+", "\t10", "\t100")
-label2 = Label("othercide","100+", "\t1", "\t10")
+label2 = Label("othercide", "100+", "\t1", "\t10")
 
 # print dictionary object as json
 """ print(f"[debug:] print given object as json")
@@ -81,8 +81,8 @@ print(f"{label2.name} owned: {label2.owned} spent total: {label2.spent}\n")
 
 # call function, change attributes
 print(f"[call: ]>>> label1.autobuy(), label2.autobuy() 1 critical for 10, buy 2 othercide for 36\n")
-label1.autobuy(1,10)
-label2.autobuy(2,36)
+label1.autobuy(1, 10)
+label2.autobuy(2, 36)
 
 # doesn't work with return value condition, maybe too much bash thinking
 """
@@ -91,7 +91,7 @@ if label1.autobuy(1,10):
     print(f"autobuy: {amount} for {price} [success]")
 else:
     #print(f"autobuy: {label1.amount} for {label1.price} [failed]")
-    print(f"autobuy: {amount} for {price} [failed]") 
+    print(f"autobuy: {amount} for {price} [failed]")
 """
 
 # use user input for method buy() arguments
