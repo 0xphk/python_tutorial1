@@ -5,7 +5,7 @@ print('literal string containing "string"')
 print('\'literal string\' containing "string"')
 
 # print multiline strings using '''
-print('''\'literal string\' 
+print('''\'literal string\'
       in multi lines
       with "string"
       ''')

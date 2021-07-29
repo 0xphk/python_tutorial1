@@ -6,7 +6,7 @@ for val in list:
     print(val)
 
 print("# use range(1,10) start stop")
-for int in range(0,10):
+for int in range(0, 10):
     print(int)
 
 print("# use range(1,10,2) start stop step")

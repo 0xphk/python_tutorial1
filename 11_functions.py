@@ -36,7 +36,7 @@ print('use variables as function parameter "name", "age"')
 name = str(input("enter name: "))
 age = int(input("enter age: "))
 def hello(name, age):
-    print("name, age:", name,",", age)
+    print("name, age:", name, ",", age)
 hello(name, age)
 
 # determine max value from inputs
@@ -49,4 +49,4 @@ def max(a, b):
     else:
         return a
 result = max(a, b)
-print("max value:",result)
+print("max value:", result)

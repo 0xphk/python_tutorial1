@@ -16,4 +16,3 @@ print((8 + 2) / (4 + 1))
 result = eval('9 + 2')
 print("result is:", result)
 print("\nresult is:", (9 + 2))
-
