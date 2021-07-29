@@ -48,11 +48,9 @@ class Label:
         self.price = label1.price
         self.owned += label1.amount
         self.spent += label1.price
-""" 
-    def checkout(self):
+""" def checkout(self):
         self.owned += int(label1.amount)
-        self.spent += int(label1.price)
-"""
+        self.spent += int(label1.price) """
 
 # print __doc__ object if class description is given
 print(f"\n[debug:] Print class doc \'print(Label.__doc__)\'")
