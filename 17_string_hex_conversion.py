@@ -4,11 +4,11 @@ import codecs
 # format output
 print("\nformatted output from input, hex+byte conversion of strings\n")
 name = input("enter name: ")
-# unsure why input is stored in {}
-# {} Implicitly references the first positional argument {name}
-# {0} references the first positional argument {name}
-# print("hello {0}".format(name))
-print("\nhello {}".format(name))
+# {n} references n positional argument
+print('''\n>>> print("hello {0}".format(name)) is the same as print("hello {}".format(name)
+>>> {}  implicitly references the first positional argument format(name)
+>>> {0} explicitly references the first positional argument format(name)\n''')
+print("hello {}".format(name))
 print()
 
 # 2nd postitional arg does not yet exist so this fails
@@ -18,7 +18,7 @@ print()
 name_hex = name.encode('utf-8').hex()
 print("hex representation of string 'name' as hex string 'name_hex':", repr(name.encode('utf-8').hex()))
 print(">>> type of 'f{repr(name.encode('utf-8').hex()}':", type(repr(name.encode('utf-8').hex())))
-print("hex encoding of string 'name' as hex string 'name_hex':", name.encode('utf-8').hex())
+print("\nhex encoding of string 'name' as hex string 'name_hex':", name.encode('utf-8').hex())
 print(">>> type of 'f{name.encode('utf-8').hex()}':", type(name.encode('utf-8').hex()))
 
 # add new arguments as first and third positional argument
