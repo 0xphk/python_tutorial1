@@ -1,8 +1,10 @@
+# string length input
 print("# check string/number length of input")
 string = input("\nenter string[8]: ")
 if len(string) < 8:
     print("\nstring is too short\n8 characters minimum\n")
 
+# number length input
 print("# determine number length by converting it to string so len() could work\n")
 number = int(input("enter digits[8]: "))
 if len(str(number)) < 8:
