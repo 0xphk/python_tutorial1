@@ -5,7 +5,8 @@ import codecs
 print("\nformatted output from input, hex+byte conversion of strings\n")
 name = input("enter name: ")
 # {n} references n positional argument
-print('''\n>>> print("hello {0}".format(name)) is the same as print("hello {}".format(name)
+print('''\nnotes about positional arguments in functions
+>>> print("hello {0}".format(name)) is the same as print("hello {}".format(name)
 >>> {}  implicitly references the first positional argument format(name)
 >>> {0} explicitly references the first positional argument format(name)\n''')
 print("hello {}".format(name))
