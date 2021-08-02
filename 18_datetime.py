@@ -85,3 +85,41 @@ print(today)
 print('''>>> print today(microsecond) as formatted 'bold' + 'cyan' ansi concatenated string''')
 print('>>> print(color.BOLD + color.CYAN + str(today.microsecond) + color.END)')
 print(color.BOLD + color.CYAN + str(today.microsecond) + color.END + ' yay, we have colors !\n')
+
+# string to datetime obj
+print('''datetime formatting:
+>>> time
+>>> %Z - timezone name
+>>> %z - UTC offset +HHMM or -HHMM
+>>> %p - locales equivalent am or pm
+>>> %I - 12h hour as zero padded decimal number
+>>> %H - 24h hour as zero padded decimal number
+>>> %M - minute as zero padded decimal number
+>>> %S - second as zero padded decimal number
+>>> %f - microsecond as zero padded decimal number
+
+>>> day, weekday
+>>> %d - day of month as zero padded decimal number
+>>> %j - day of the year as as zero padded decimal number
+>>> %w - weekday as decimal number 0=Sunday 6=Saturday
+>>> %a - weekday abbreviated name
+>>> %A - weekday full name
+
+>>> year
+>>> %Y - year w/ century as decimal number
+>>> %y - year w/o century as zero padded decimal number
+
+>>> month
+>>> %B - months full name
+>>> %b - months abbreviated name
+>>> %m - month as zero padded decimal number\n''')
+
+print('convert string to datetime object')
+print('>>> using datetime.datetime.strptime() string parse time method')
+print('>>> format datestr = ' + '"' + color.BOLD + color.CYAN + '31.07.1977' + color.END + ', ' + color.YELLOW + '16:31:12' + color.END + '"')
+print('>>> but should be parsed as python default datetime format')
+print('"1977-07-31, 16:31:12"')
+datestr = "31.07.1977, 16:31:12"
+print('>>> datecon = datetime.datetime.strptime(datestr, "%d.%m.%Y, %H:%M:%S")')
+datecon = datetime.datetime.strptime(datestr, "%d.%m.%Y, %H:%M:%S")
+print(color.BOLD + str(datecon) + color.END + ' works ;)')
