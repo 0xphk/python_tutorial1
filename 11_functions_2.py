@@ -44,16 +44,18 @@ print(area(6, 32))
 
 # keyword arguments are also called default arguments
 # required arguments come first!
-print('''\nrequired arguments before keyword arguments!
->>> argument order is important
+print('''\n'required' (non-default) args before 'keyword' (default) args!
+>>> wrong argument order:
 >>> def g(x=0, y):
 >>>     return x + y
->>> gives error
+>>> SyntaxError: non-default argument follows default argument
+>>>
 >>> required argument 'y' is defined after keyword argument 'x'
 >>>
 >>> def g(y, x=0):
 >>>     return x + y
 >>> works''')
+
 def g(y, x=0):
     # arithmetic
     # return x + y
@@ -77,5 +79,4 @@ def cm(feet=0, inches=0):
 print(cm(feet=5))
 print(cm(inches=32))
 print(cm(feet=5, inches=8))
-print(cm(inches=8, feet=5),'cm')
-
+print(cm(inches=8, feet=5), 'cm')
