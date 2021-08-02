@@ -1,7 +1,7 @@
 # import module first
 import datetime
 
-# add some ansi colors and formats
+# add some ansi colors and formats, see 0_ansi.md for reference
 class color:
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
@@ -9,6 +9,8 @@ class color:
     BLUE = '\033[94m'
     GREEN = '\033[92m'
     YELLOW = '\033[93m'
+    # 256color forground [38;5;$idm]
+    DARKYELLOW = '\033[38;5;136m'
     RED = '\033[91m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
@@ -80,14 +82,27 @@ print('\naccess current datetime using method datetime.datetime.today()')
 print('>>> today = datetime.datetime.today()')
 today = datetime.datetime.today()
 print('>>> method displays microseconds as well')
-print('>>> print(today)')
+print('>>> print(today)\n')
 print(today)
-print('''>>> print today(microsecond) as formatted 'bold' + 'cyan' ansi concatenated string''')
+print('''\n>>> print today(microsecond) as formatted 'bold' + 'cyan' ansi concatenated string''')
 print('>>> print(color.BOLD + color.CYAN + str(today.microsecond) + color.END)')
-print(color.BOLD + color.CYAN + str(today.microsecond) + color.END + ' yay, we have colors !\n')
+print('>>> format: %Y-%m-%d %H:%M:%S.%f')
+print('>>> extra long concatenated stuff ^^')
+print('''>>> print(
+>>> str(today.date()) + ' ' +
+>>> str(today.hour) + ':' +
+>>> str(today.minute) + ':' +
+>>> str(today.second) + '.' +
+>>> color.BOLD + color.CYAN +
+>>> str(today.microsecond) +
+>>> color.END + color.DARKYELLOW +
+>>> ' \\o/ yay, we have "256 color" colors !' +
+>>> color.END)\n''')
+print(str(today.date()) + ' ' + str(today.hour) + ':' + str(today.minute) + ':' + str(today.second) + '.' + color.BOLD + color.CYAN + str(today.microsecond) + color.END + color.DARKYELLOW + ' \\o/ yay, we have "256color" colors !' + color.END)
 
 # string to datetime obj
-print('''datetime formatting:
+print('''\ncustom datetime formatting:
+
 >>> time
 >>> %Z - timezone name
 >>> %z - UTC offset +HHMM or -HHMM
@@ -116,10 +131,12 @@ print('''datetime formatting:
 
 print('convert string to datetime object')
 print('>>> using datetime.datetime.strptime() string parse time method')
-print('>>> format datestr = ' + '"' + color.BOLD + color.CYAN + '31.07.1977' + color.END + ', ' + color.YELLOW + '16:31:12' + color.END + '"')
+print('>>> given datestr = ' + '"' + color.BOLD + color.CYAN + '31.07.1977' + color.END + ', ' + color.YELLOW + '16:31:12' + color.END + '"')
 print('>>> but should be parsed as python default datetime format')
-print('"1977-07-31, 16:31:12"')
+print('>>> parsed datestr = ' + color.GREEN + "1977-07-31 16:31:12" + color.END + '\n')
+print('given datestr = ' + color.BOLD + "31.07.1977, 16:31:12" + color.END)
 datestr = "31.07.1977, 16:31:12"
-print('>>> datecon = datetime.datetime.strptime(datestr, "%d.%m.%Y, %H:%M:%S")')
+print('\n>>> datecon = datetime.datetime.strptime(datestr, "%d.%m.%Y, %H:%M:%S")')
+print('>>> type of \'datecon\':', type(datetime.datetime.strptime(datestr, "%d.%m.%Y, %H:%M:%S")))
 datecon = datetime.datetime.strptime(datestr, "%d.%m.%Y, %H:%M:%S")
-print(color.BOLD + str(datecon) + color.END + ' works ;)')
+print('\nparsed datestring =', color.BOLD + str(datecon) + color.END + '\n\n' + color.PURPLE + 'works ;)\n' + color.END)
