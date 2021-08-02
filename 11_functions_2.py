@@ -35,8 +35,25 @@ print(volume.__doc__, '\nvolume:', volume(4))
 def area(b, h):
     """returns the area of a triangle [A = 1/2 b * h]"""
     print('side b', b, 'side h', h)
-    A = (1.0 / 2.0) * b * h
-    B = (0.5 * b) * h
-    return A, B
+    return 0.5 * b * h
+    # A = (1.0 / 2.0) * b * h
+    # B = (0.5 * b) * h
+    # return A, B
 
-print(area(2, 13))
+print(area(6, 32))
+
+# keyword arguments are also called default arguments
+print('''calculate inches and foot
+>>> inch = 2.54 cm
+>>> foor = 12 inches''')
+
+# give *kwargs default values of 0
+def cm(feet=0, inches=0):
+    """converts a length from feet and inches to centimeters"""
+    inches_to_cm = inches * 2.54
+    feet_to_cm = feet * 12 * 2.54
+    return inches_to_cm + feet_to_cm
+
+print(cm(feet=5))
+print(cm(inches=32))
+print(cm(feet=5, inches=8))
