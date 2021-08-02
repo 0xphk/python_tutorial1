@@ -43,6 +43,26 @@ def area(b, h):
 print(area(6, 32))
 
 # keyword arguments are also called default arguments
+# required arguments come first!
+print('''\nrequired arguments before keyword arguments!
+>>> argument order is important
+>>> def g(x=0, y):
+>>>     return x + y
+>>> gives error
+>>> required argument 'y' is defined after keyword argument 'x'
+>>>
+>>> def g(y, x=0):
+>>>     return x + y
+>>> works''')
+def g(y, x=0):
+    # arithmetic
+    # return x + y
+    # concatenated strings, then arithmetic, then single values
+    return str(x) + str(y), x + y, x, y
+print(g(1, 2))
+# new class 'tuple' discovered
+print(type(g(1, 2)))
+
 print('''calculate inches and foot
 >>> inch = 2.54 cm
 >>> foor = 12 inches''')
@@ -57,3 +77,5 @@ def cm(feet=0, inches=0):
 print(cm(feet=5))
 print(cm(inches=32))
 print(cm(feet=5, inches=8))
+print(cm(inches=8, feet=5),'cm')
+
