@@ -47,6 +47,8 @@ primes.append(17)
 primes.append(19)
 print(primes)
 
+# slicing starts w/ beginning value is INCLUDED, ending value is NOT
+# this explains why last element in range is element-1, STILL CONFUSING
 # print range from list using index x:y [index starts from 0]
 print('whole prime list', primes)
 # get last element (-1) create new list, display index 0 which is the only index at this time
@@ -58,4 +60,28 @@ print(primes[-1:][0])
 # returns type integer
 print(type(primes[-1:][0]))
 # get last element in list
-print(primes)
+
+# lists can contain different data types like sets, even contain other lists
+example = [1, 2.71828, True, "Alpha", [64, False, [True, 5+0j]]]
+print('\nexample = [1, 2.71828, True, "Alpha", [64, False, [True, 5+0j]]]')
+print('''\nelement/   ^  ^        ^     ^         ^   ^       ^     ^
+index =    0  1        2     3         4:0 4:1     4:2:0 4:2:1''')
+
+# print element 4 which is a list, print element 0 from that list
+print('\nprint inside element[4] the element[0] or index[0]:\nprint(example[4][0]) =', example[4][0])
+print('print inside element[4] the next_list element[2] and index[1]:\nprint(example[4][2][1]) =', example[4][2][1])
+
+# concatenation of lists
+numbers = [1, 2, 3]
+letters = ['a', 'b', 'c']
+print('numbers = [1, 2, 3]')
+print("letters = ['a', 'b', 'c']")
+print('numbers + letters')
+print(numbers + letters)
+print('letters + numbers')
+print(letters + numbers)
+print('reverse order in lists')
+numbers.reverse()
+letters.reverse()
+print('concatenate reversed lists')
+print(numbers + letters)
