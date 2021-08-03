@@ -1,7 +1,7 @@
 import datetime
 
 def strhex(i):
-    """returns hex value for given string"""
+    """returns hex value for given string\nremember to use str() as input"""
     # prints 2 times?
     # print(i)
     ie = i.encode("utf-8").hex()
