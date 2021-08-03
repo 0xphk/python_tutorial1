@@ -84,3 +84,4 @@ print(primes.union(composites))
 # check for elements in sets using _in_ keyword 'element' in 'set_name' return bool
 print('is number 2 a prime?', 2 in primes)
 print('is number 7 a prime?', 7 in primes)
+print('is number 6 not a prime?', 6 not in primes)
