@@ -1,13 +1,13 @@
 import datetime
 
-def strhex(i):
+def strhx(i):
     """returns hex value for given string\nremember to use str() as input"""
     # prints 2 times?
     # print(i)
     ie = i.encode("utf-8").hex()
     return ie
-# print(strhex.__doc__)
-# print(strhex('phk'))
+# print(strhx.__doc__)
+# print(strhx('phk'))
 
 now = datetime.datetime.today()
 # print('script finished', now, '\n')
