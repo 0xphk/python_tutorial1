@@ -1,7 +1,7 @@
 import datetime
 
 def strhx(i):
-    """returns hex value for given string\nremember to use str() as input"""
+    """returns hex value for given input - expects str()"""
     # prints 2 times?
     # print(i)
     ie = i.encode("utf-8").hex()
@@ -42,4 +42,4 @@ def dtformat():
 format = "%Y%m%dT%H%M%SZ"
 now = datetime.datetime.today()
 nowf = now.strftime(format)
-# print('script finished', now, '\n')
+# print('finished:', now, nowf, '\n')
