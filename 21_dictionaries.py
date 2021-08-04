@@ -5,7 +5,7 @@ import time
 import hashlib
 
 tstart = time.time()
-print('\nstart:', tstart, time.time(), now, nowf, '\n')
+print('\nstart:', tstart, now(), nowf(), '\n')
 
 print('>>> import strhx(), now() from file "modules"\n>>> from modules import strhx, now')
 print('>>> now():', type(now))
@@ -100,4 +100,4 @@ else:
 time.sleep(1)
 tend = time.time()
 print('\ntstart:', tstart, '\ntend:  ', tend)
-print('\nfinished:', time.time(), 'took ', tend - tstart, now, nowf, '\n')
+print('\nfinished:', time.time(), 'took ', tend - tstart, now(), nowf(), '\n')
