@@ -7,7 +7,7 @@ import hashlib
 tstart = time.time()
 print('\nstart:', tstart, now(), nowf(), '\n')
 
-print('>>> import strhx(), now() from file "modules"\n>>> from modules import strhx, now')
+print('>>> import strhx(), now(), nowf() from file "modules"\n>>> from modules import strhx, now')
 print('>>> now():', type(now))
 print('>>> strhx():',type(strhx))
 print('>>> strhx.__doc__: ',strhx.__doc__,sep='')
@@ -31,7 +31,7 @@ print(post_plain['location'])\n''', post_plain['location'],sep='\n')
 
 # access keys using index w/ additional list (unsure if this is a good or a bad idea, maybe the latter)
 post_plain_index = list(post_plain.keys())
-print('''\n>>> indirectly access dict items using index[1] but requires to create an additional list
+print('''\n>>> indirectly access dict items using index[0] but requires to create an additional list
 >>> index is only available using this list, not the plain dict !
 post_plain_index = list(post_plain.keys())''', sep='\n')
 print('\n', post_plain.keys(), '\nprint(post_plain_index[0]): ', post_plain_index[0], sep='')
@@ -52,7 +52,7 @@ print('\npost_plain_digest: ', post_plain_digest, '\ntype: ', type(post_plain_di
 print('''\n>>> add new key 'hash' with sha256 value of 'user_id' (post_plain_digest) to dict post_plain''')
 print('''post_plain['hash'] = post_plain_digest''')
 post_plain['hash'] = post_plain_digest
-print('\n',post_plain.keys())
+print('\n',post_plain.keys(),sep='')
 
 # update value for key in dict from dict2 post_plain_update w/ same key
 print('''\n>>> update value in post_plain['location'] using post_plain.update() method and
@@ -63,14 +63,14 @@ print('''\ndict2:\npost_plain_update key ['location']:''', post_plain_update['lo
 print('\nupdate keys in both dictionaries\npost_plain.update(post_plain_update), post_hex.update(post_plain_update)')
 post_plain.update(post_plain_update)
 post_hex.update(post_plain_update)
-print('''\n>>> post_plain, post_hex updated keys ['location']:
-post_plain['location']: ''', post_plain['location'], '''\n
+print('''\n>>> post_plain, post_hex updated keys ['location']:\n
+post_plain['location']: ''', post_plain['location'], '''
 post_hex['location']: ''', post_hex['location'], '\n\nnow both match post_plain_update', sep='')
 
 # hex conversion / compare
-print('\nuse imported strhx function for message conversion to hex string')
-print('\npost_plain:\n', post_plain['message'], type(post_plain['message']),sep='\n')
-print('\npost_hex:\n', post_hex['message'], type(post_hex['message']),sep='\n')
+print('\n>>> use imported strhx function for message conversion to hex string')
+print('''\npost_plain['message']:\n''', post_plain['message'], type(post_plain['message']),sep='\n')
+print('''\npost_hex['message]:\n''', post_hex['message'], type(post_hex['message']),sep='\n')
 
 # note, no hash in post_hex dict, update does not create keys
 print('\nNOTE: no hash key in post_hex! we only added it to post_plain\n\npost_plain:', post_plain, '\npost_hex:', post_hex, sep='\n')

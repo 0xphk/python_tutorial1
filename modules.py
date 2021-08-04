@@ -49,4 +49,4 @@ def nowf():
     format = "%Y%m%dT%H%M%SZ"
     return now().strftime(format)
 
-print('\nfinished:', now(), nowf(), '\n')
+# print('\nfinished:', now(), nowf(), '\n')
