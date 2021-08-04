@@ -1,9 +1,13 @@
 # import some functions and classes [doesn't work if filenames start w/ numbers eg. 98_test]
 # explicitly calling '__import__' builtin might help # strhx = __import__('98_test')
 from modules import strhx, now, nowf
+import time
 import hashlib
 
-print('\n>>> import strhx(), now() from file "modules"\n>>> from modules import strhx, now')
+tstart = time.time()
+print('\nstart:', tstart, time.time(), now, nowf, '\n')
+
+print('>>> import strhx(), now() from file "modules"\n>>> from modules import strhx, now')
 print('>>> now():', type(now))
 print('>>> strhx():',type(strhx))
 print('>>> strhx.__doc__: ',strhx.__doc__,sep='')
@@ -93,4 +97,7 @@ if hx_all == hx:
 else:
     print('\ninput:',hx_all,'\nmsg:',hx,'\n>>> NO_MATCH',sep='\n')
 
-print('\nfinished:', now, nowf, '\n')
+time.sleep(1)
+tend = time.time()
+print('\ntstart:', tstart, '\ntend:  ', tend)
+print('\nfinished:', time.time(), 'took ', tend - tstart, now, nowf, '\n')
