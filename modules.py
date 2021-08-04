@@ -39,7 +39,19 @@ def dtformat():
     >>> %b - months abbreviated name
     >>> %m - month as zero padded decimal number\n''')
 
+
+def now():
+    return datetime.datetime.today()
 format = "%Y%m%dT%H%M%SZ"
-now = datetime.datetime.today()
-nowf = now.strftime(format)
-# print('finished:', now, nowf, '\n')
+
+# nowf = datetime.datetime.strftime(format, now)
+# nowf = now().strftime(format)
+def nowf():
+    return now().strftime(format)
+
+# print(now())
+# print(type(now()))
+# print(nowf())
+# print(type(nowf()))
+
+print('finished:', now(), nowf(), '\n')
