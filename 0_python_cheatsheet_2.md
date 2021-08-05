@@ -1,4 +1,5 @@
-> added to own tutorial as reference (from: https://github.com/gto76/python-cheatsheet) - all credits go there
+> added to own tutorial as reference (from: https://github.com/gto76/python-cheatsheet)
+- all credits go there
 ___
 
 Comprehensive Python Cheatsheet

@@ -2,7 +2,8 @@
 Title: ansi
 Template: 
 ---
-> added to tutorial as reference (from: https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) - all credits go there
+> added to tutorial as reference (from: https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) 
+- all credits go there
 ___
 
 # ANSI Escape Sequences

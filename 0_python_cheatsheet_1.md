@@ -1,4 +1,5 @@
-> added to tutorial as reference (from: https://github.com/wilfredinni/python-cheatsheet) - all credits go there
+> added to tutorial as reference (from: https://github.com/wilfredinni/python-cheatsheet)
+- all credits go there
 ___
 
 # About [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/wilfredinni/python-cheatsheet/master?filepath=jupyter_notebooks)
