@@ -60,7 +60,7 @@ class color:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     END = '\033[0m'
-    # 256color forground [38;5;$idm]
+    # 256color foreground [38;5;$idm]
     DARKGRAY = '\033[38;5;240m'
     DARKYELLOW = '\033[38;5;136m'
 
