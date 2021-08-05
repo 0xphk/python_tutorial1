@@ -2,7 +2,7 @@
 Title: ansi
 Template: 
 ---
-> added to tutorial as reference (from: https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) 
+> added as reference (from: https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) 
 - all credits go there
 ___
 
@@ -98,6 +98,7 @@ Most terminals support 8 and 16 colors, as well as 256 (8-bit) colors. These col
 | Magenta | `35` | `45` |
 | Cyan | `36` | `46` |
 | White | `37` | `47` |
+| **256 color identifier, see table below**  | **38** | **48** |
 | Reset | `0` | `0` |
 
 > Note: The **Reset** is the reset code that resets _all_ colors and text effects.
@@ -124,11 +125,13 @@ ESC[38;5;${ID}m
 | `ESC[38;5;${ID}m` | Set foreground color. |
 | `ESC[48;5;${ID}m` | Set background color. |
 
-Where **ID** is the color index from 0 to 255 of the color table:
+Where **ID** is the color index from 0 to 255 of the color table (self hosted*):
 
 ![256 Color table](https://blog.phk.one/colortable256.png)
 
-old link 256 Color table https://user-images.githubusercontent.com/995050/47952855-ecb12480-df75-11e8-89d4-ac26c50e80b9.png
+***original link to 256 Color table*** all credits go there 
+
+`https://user-images.githubusercontent.com/995050/47952855-ecb12480-df75-11e8-89d4-ac26c50e80b9.png`
 
 The table starts with the original 16 colors (0-15).
 
