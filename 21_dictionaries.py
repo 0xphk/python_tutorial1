@@ -1,6 +1,6 @@
 # import some functions and classes [doesn't work if filenames start w/ numbers eg. 98_test]
 # explicitly calling '__import__' builtin might help # strhx = __import__('98_test')
-from modules import strhx, now, nowf
+from modules import strhx, now, nowf, color
 import time
 import hashlib
 
@@ -99,5 +99,6 @@ else:
 
 time.sleep(1)
 tend = time.time()
-print('\ntstart:', tstart, '\ntend:  ', tend)
-print('\nfinished:', time.time(), 'took ', tend - tstart, now(), nowf(), '\n')
+print(color.DARKYELLOW,'\ntstart:',color.CYAN, tstart, color.DARKYELLOW, '\n  tend:', color.DARKCYAN, tend, color.END)
+print(color.DARKYELLOW,'\nfinished:', color.GREEN, time.time(), color.DARKYELLOW, 'took:', color.GREEN, tend - tstart, 's', '\n')
+print(color.CYAN, now(), color.DARKCYAN, nowf(), color.END,'\n',sep='')
