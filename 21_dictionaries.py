@@ -99,6 +99,7 @@ else:
 
 time.sleep(1)
 tend = time.time()
-print(color.DARKYELLOW,'\ntstart:',color.CYAN, tstart, color.DARKYELLOW, '\n  tend:', color.DARKCYAN, tend, color.END)
-print(color.DARKYELLOW,'\nfinished:', color.GREEN, time.time(), color.DARKYELLOW, 'took:', color.GREEN, tend - tstart, 's', '\n')
-print(color.CYAN,now(),color.GREEN,' ',nowf(),color.END,'\n',sep='')
+print(color.DARKYELLOW,'\nt_started  :', color.CYAN, tstart, color.END)
+print(color.DARKYELLOW,'\nt_finished :', color.DARKCYAN, time.time(), color.END)
+print(color.DARKYELLOW,'\nt_duration :', color.GREEN, tend - tstart)
+print('\n', color.BOLD,now(),color.UNDERLINE,' ', nowf(), color.END, '\n', sep='')
