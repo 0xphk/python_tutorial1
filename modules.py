@@ -56,11 +56,12 @@ class color:
     BLUE = '\033[94m'
     GREEN = '\033[92m'
     YELLOW = '\033[93m'
-    # 256color forground [38;5;$idm]
-    DARKYELLOW = '\033[38;5;136m'
     RED = '\033[91m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     END = '\033[0m'
+    # 256color forground [38;5;$idm]
+    DARKGRAY = '\033[38;5;240m'
+    DARKYELLOW = '\033[38;5;136m'
 
 # print(color.DARKYELLOW, '\nfinished:', color.BOLD, color.GREEN, now(), color.CYAN, nowf(), color.END, '\n')
