@@ -1,10 +1,13 @@
 import datetime
+import sys
+from time import sleep
 from subprocess import call
 
-# using sp.call()
+# reset terminal using subprocess.call()
 def term_reset():
     _ = call('reset')
 
+# strings to hex representation
 def strhx(i):
     """returns hex value for given input - expects str()"""
     # prints 2 times?
@@ -54,6 +57,25 @@ def nowf():
     format = "%Y%m%dT%H%M%SZ"
     return now().strftime(format)
 
+# progress spinner using generator w/ some help from [https://stackoverflow.com/a/4995896]
+# def spinit():
+def spinit(n=9):
+    # create generator, note keyword 'yield' instead of 'return'
+    def spin():
+        while True:
+            for cursor in '|/-\\':
+                yield cursor
+    spinner = spin()
+    # initial value = 2 spins
+    for i in range(1,n):
+        # print('>>>',end=' ',sep='')
+        # print(str(i),'',end='',sep='\r')
+        sys.stdout.write(next(spinner))
+        sys.stdout.flush()
+        sleep(0.5)
+        sys.stdout.write('\b')
+
+# custom color output
 class color:
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
