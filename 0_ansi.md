@@ -181,6 +181,7 @@ These escape sequences are usually not well documented.
 ### Example Modes
 
 | ESC Code Sequence | Description |
+|:------------------|:------------|
 | `ESC[?25l` | make cursor invisible |
 | `ESC[?25h` | make cursor visible |
 | `ESC[?47l` | restore screen |
