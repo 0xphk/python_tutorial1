@@ -1,4 +1,9 @@
 import datetime
+from subprocess import call
+
+# using sp.call()
+def term_reset():
+    _ = call('reset')
 
 def strhx(i):
     """returns hex value for given input - expects str()"""
@@ -63,5 +68,7 @@ class color:
     # 256color foreground [38;5;$idm]
     DARKGRAY = '\033[38;5;240m'
     DARKYELLOW = '\033[38;5;136m'
+    # non color ansi codes
+    CLS = '\033[2J'
 
 # print(color.DARKYELLOW, '\nfinished:', color.BOLD, color.GREEN, now(), color.CYAN, nowf(), color.END, '\n')
