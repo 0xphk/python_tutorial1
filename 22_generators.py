@@ -1,5 +1,5 @@
 # converts function in generator using 'yield' keyword
-from modules import spinit, term_reset
+from modules import term_reset, spinit
 
 # function to match character 'e' in string
 def printresult(String):
@@ -19,7 +19,7 @@ term_reset()
 # fprint status line, no newline
 print(f"The number of 'e' in word {String} == ",end="")
 
-# spinning cursor w/ custom count
+# spin cursor
 spinit(6)
 
 # strip does nothing here
