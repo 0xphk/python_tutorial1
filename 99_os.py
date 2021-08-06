@@ -5,6 +5,7 @@ import os
 return_echo = os.system('/usr/bin/echo test')
 
 ver = 'python --version'
+# os.system only gives exit value, no output
 return_ver = os.system(ver)
 
 # use os.popen to catch output using os.popen().read()
