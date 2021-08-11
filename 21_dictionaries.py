@@ -1,7 +1,8 @@
-# python3 datastructure dictionaries:
+# python3 datastructure dictionaries: dicts are key:value pairs (associative array, map)
 
 """
 [Python3: List vs Tuple vs Set vs Dictionary]
+https://blog.softhints.com/python-list-vs-tuple-vs-dictionary-vs-set/
 
 Lists:  for ordered collection of items or sequence of objects,
         indexed, _not_ hashable
@@ -11,10 +12,14 @@ Tuples: can be considered as immutable list,
         hashable, _not_ indexed
 
 Sets:   unique list w/o order and duplicates,
-        fast + union/intersection operations/methods
+        fast + union/intersection operations/methods,
         not hashable
 
-Dict:   pair of key and values
+Dict:   pair of key and values,
+        requires lookup by key or value,
+        every key requires a value,
+        values can be added, removed or modified values of dictionaries,
+        indexed keys, no ordering
 """
 
 # import some functions and classes [doesn't work if filenames start w/ numbers eg. 98_test]
