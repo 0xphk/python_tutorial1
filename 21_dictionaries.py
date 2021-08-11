@@ -1,3 +1,13 @@
+# python3 dictionaries:
+
+"""
+Python3: List vs Tuple vs Set vs Dictionary
+Lists - for ordered sequence of indexed objects
+Tuple - can be considered as immutable/hashable list
+Python Set - unique list
+Python Dictionary / dict - pair of key and values
+"""
+
 # import some functions and classes [doesn't work if filenames start w/ numbers eg. 98_test]
 # explicitly calling '__import__' builtin might help # strhx = __import__('98_test')
 from modules import strhx, now, nowf, color
@@ -7,7 +17,7 @@ import hashlib
 tstart = time.time()
 print('\nstart:', tstart, now(), nowf(), '\n')
 
-print('>>> import strhx(), now(), nowf() from file "modules"\n>>> from modules import strhx, now')
+print('>>> import strhx(), now(), nowf(), color() from file "modules"\n>>> from modules import strhx, now')
 print('>>> now():', type(now))
 print('>>> strhx():',type(strhx))
 print('>>> strhx.__doc__: ',strhx.__doc__,sep='')

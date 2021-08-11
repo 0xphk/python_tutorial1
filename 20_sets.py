@@ -1,7 +1,17 @@
+# python3 sets: introduced set literals and comprehensions (see PEP-3100) which allowed us to avoid intermediate lists
+
+"""
+Python3: List vs Tuple vs Set vs Dictionary
+Lists - for ordered sequence of indexed objects
+Tuple - can be considered as immutable/hashable list
+Python Set - unique list
+Python Dictionary / dict - pair of key and values
+"""
+
 # define set (note the missing colon on end of line)
 example = set()
 # print directory (should list example)
-print(dir(example))
+#print(dir(example))
 
 # print interactive help for add function/method
 # print(help(example.add))
@@ -85,3 +95,16 @@ print(primes.union(composites))
 print('is number 2 a prime?', 2 in primes)
 print('is number 7 a prime?', 7 in primes)
 print('is number 6 not a prime?', 6 not in primes)
+
+# another union/intersection example
+one = set([1, 2, 3, 4])
+two = set([4, 5, 6, 7])
+print(one)
+print(two)
+
+# union
+print(one.union(two))   # {1, 2, 3, 4, 5, 6, 7}
+
+# intersection
+print(one.intersection(two))
+print(one - two)
