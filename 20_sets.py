@@ -1,11 +1,20 @@
-# python3 sets: introduced set literals and comprehensions (see PEP-3100) which allowed us to avoid intermediate lists
+# python3 datastructure sets: introduced set literals and comprehensions (see PEP-3100) which allowed us to avoid intermediate lists
 
 """
-Python3: List vs Tuple vs Set vs Dictionary
-Lists - for ordered sequence of indexed objects
-Tuple - can be considered as immutable/hashable list
-Python Set - unique list
-Python Dictionary / dict - pair of key and values
+[Python3: List vs Tuple vs Set vs Dictionary]
+
+Lists:  for ordered collection of items or sequence of objects,
+        indexed, _not_ hashable
+
+Tuples: can be considered as immutable list,
+        elements can't be added, removed or replaced after declaration,
+        hashable, _not_ indexed
+
+Sets:   unique list w/o order and duplicates,
+        fast + union/intersection operations/methods
+        not hashable
+
+Dict:   pair of key and values
 """
 
 # define set (note the missing colon on end of line)

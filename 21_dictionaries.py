@@ -1,11 +1,20 @@
-# python3 dictionaries:
+# python3 datastructure dictionaries:
 
 """
-Python3: List vs Tuple vs Set vs Dictionary
-Lists - for ordered sequence of indexed objects
-Tuple - can be considered as immutable/hashable list
-Python Set - unique list
-Python Dictionary / dict - pair of key and values
+[Python3: List vs Tuple vs Set vs Dictionary]
+
+Lists:  for ordered collection of items or sequence of objects,
+        indexed, _not_ hashable
+
+Tuples: can be considered as immutable list,
+        elements can't be added, removed or replaced after declaration,
+        hashable, _not_ indexed
+
+Sets:   unique list w/o order and duplicates,
+        fast + union/intersection operations/methods
+        not hashable
+
+Dict:   pair of key and values
 """
 
 # import some functions and classes [doesn't work if filenames start w/ numbers eg. 98_test]
