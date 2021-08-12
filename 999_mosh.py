@@ -1,11 +1,11 @@
 # mosh [https://www.youtube.com/watch?v=kqtD5dpn9C8]
 
-# vars 5-9m
+# vars ~5m - ~9m
 name = " John Smith"
 age = 20
 new_patient = True
 
-# input ~9-19m
+# input ~9m - ~19m
 name = input('name: ')
 print('>>> w/o strip(): hello ',name)
 # strip() whitespaces from string
@@ -24,3 +24,12 @@ First = 10.1
 Second = 20
 Sum = First + float(Second)
 print('First:\t',First,'\t',type(First),'\nSecond:\t',Second,'\t',type(Second),'\nSum:\t',Sum,'\t',type(Sum))
+
+# strings ~19m - 
+course = "Python for Beginners"
+print(course)
+print('using str.upper() method:',course.upper())
+
+# find index of letter 'y'
+print('find index of letter "y":',course.find('y'))
+print('replace lowercase "ython" to uppercase:',course.replace('ython', 'YTHON'))
