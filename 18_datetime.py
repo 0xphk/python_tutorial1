@@ -1,7 +1,7 @@
 # import module first
 import datetime
 
-# add some ansi colors and formats, see 0_ansi.md for reference
+# add some ansi colors and formats, see 00_ansi.md for reference
 class color:
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
