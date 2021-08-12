@@ -56,10 +56,10 @@ print("get type:", type(z))
 # print complex number representation
 print("print(z):", z)
 
-# print 1st real value?
+# print 'real' part value
 print("print(z.real):", z.real)
 
-# print 2nd real value? - confusing output
+# print 'imaginary' part value? - confusing output
 print("print(z.imag):", z.imag)
 
 # python2+3 - float
