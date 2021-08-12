@@ -1,4 +1,4 @@
-# mosh [https://www.youtube.com/watch?v=kqtD5dpn9C8]
+# coding w/ mosh: python in 1h [https://www.youtube.com/watch?v=kqtD5dpn9C8]
 from modules import color, term_reset, spinit
 from time import sleep
 term_reset()
