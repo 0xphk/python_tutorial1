@@ -1,3 +1,4 @@
+# deprecated, moved to modules
 class color:
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
