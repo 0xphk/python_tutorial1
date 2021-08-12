@@ -1,4 +1,4 @@
-# disable certain errors
+# disable certain errors, vscodium default
 "python.linting.flake8Args": [
     "--max-line-length=120",
     "--ignore=F541",
@@ -6,6 +6,6 @@
 # current
 "python.linting.flake8Args": [
     "--max-line-length=120",
-    "--ignore=F541,E265,E302,E305,E501,",
+    "--ignore=F541,E265,E226,E302,E305,E501,E231",
     "--verbose",
 ],
