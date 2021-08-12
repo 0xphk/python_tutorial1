@@ -1,11 +1,13 @@
 # mosh [https://www.youtube.com/watch?v=kqtD5dpn9C8]
 from modules import color, term_reset, spinit
 term_reset()
+print(color.BOLD,color.DARKCYAN,"Python for Beginners by mosh",color.END,sep='',end='\n')
 
 # vars ~5m - ~9m
 name = " John Smith"
 age = 20
 new_patient = True
+print('\nPatient name:\t',name.strip(),'\nPatient age:\t',str(age).strip(),'\nIs new patient?\t',str(new_patient).strip(),sep='',end='\n\n')
 
 # input ~9m - ~19m
 name = input('name: ')
@@ -22,7 +24,7 @@ if int(birth_month) < int(current_month):
     age += 1
 print('you are currently: ',str(age).strip(),'years old!')
 print('reset term in 3s ...')
-print(color.DARKYELLOW)
+print(color.DARKCYAN)
 spinit(10)
 print(color.END)
 term_reset()
@@ -33,7 +35,7 @@ Second = 20
 Sum = First + float(Second)
 print('First:\t',First,'\t',type(First),'\nSecond:\t',Second,'\t',type(Second),'\nSum:\t',Sum,'\t',type(Sum))
 print('reset term in 3s ...')
-print(color.DARKYELLOW)
+print(color.DARKCYAN)
 spinit(10)
 print(color.END)
 term_reset()
