@@ -86,9 +86,12 @@ print(type(primes[-1:][0]))
 
 # lists can contain different data types like sets, even contain other lists
 example = [1, 2.71828, True, "Alpha", [64, False, [True, 5+0j]]]
+print(example)
 print('\nexample = [1, 2.71828, True, "Alpha", [64, False, [True, 5+0j]]]')
 print('''\nelement/   ^  ^        ^     ^         ^   ^       ^     ^
 index =    0  1        2     3         4:0 4:1     4:2:0 4:2:1''')
+print('\naccess list elements inside list elements: print(example[4][2][1])')
+print(example[4][2][1])
 
 # print element 4 which is a list, print element 0 from that list
 print('\nprint inside element[4] the element[0] or index[0]:\nprint(example[4][0]) =', example[4][0])
