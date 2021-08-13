@@ -75,3 +75,9 @@ print('Exponent x^n: 10 ** 3 = ',10 ** 3)
 print('Division(float): 10 / 3 = ',10 / 3)
 print('Division(int): 10 // 3 = ',10 // 3)
 print('Division(remainder): 10 % 3 = ',10 % 3)
+
+# logical operators
+price = 25
+print(price > 10 and price < 30)
+# same but shorter
+print(price < 30 > 10)
