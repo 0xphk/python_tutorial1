@@ -107,3 +107,23 @@ numbers.reverse()
 letters.reverse()
 print('concatenate reversed lists')
 print(numbers + letters)
+
+# mosh - list ranges still confusing to me
+print()
+list = ['John','Bob','Mary','Jane','Mosh']
+print(list)
+# again, range does not include the last given index
+# range end is always range+1 even this index does not exist
+print(list[0:4])
+# same as above, added step attr
+print(list[0:4:1])
+# positive index from start 0 to end+1, negative index from end -1 to start -4
+# weird behavior, looks like you can not get a whole list as range
+# -1 prints 'mosh' 0 prints 'John' range [0:-1] excludes last element too
+print(list[0:-1:1])
+# inverse range does not work too
+#print(list[-1:-4:1])
+#print(list[-1:0])
+
+# explicitly call non_existing index 5 works?, wtf is this sh*t?
+print(list[0:6:1])
