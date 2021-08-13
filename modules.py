@@ -103,6 +103,7 @@ class ansicolor:
     strikethrough = '\033[09m'
     invisible = '\033[08m'
     cls = '\033[2J'
+
     class fg:
         black = '\033[30m'
         red = '\033[31m'
@@ -122,6 +123,7 @@ class ansicolor:
         darkcyan = '\033[36m'
         darkgray = '\033[38;5;240m'
         darkyellow = '\033[38;5;136m'
+
     class bg:
         black = '\033[40m'
         red = '\033[41m'
@@ -131,4 +133,3 @@ class ansicolor:
         purple = '\033[45m'
         cyan = '\033[46m'
         lightgrey = '\033[47m'
-

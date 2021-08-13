@@ -1,5 +1,5 @@
 # coding w/ mosh: python in 1h [https://www.youtube.com/watch?v=kqtD5dpn9C8]
-from modules import color, term_reset, spinit
+from modules import ansicolor, color, term_reset, spinit
 from time import sleep
 
 term_reset()
@@ -131,3 +131,9 @@ while i <= 10:
     print(i * '*')
     i += 1
     sleep(0.1)
+
+print('reset term in 1s ...',end=' ',sep='')
+print(ansicolor.fg.lightcyan)
+spinit(4)
+print(ansicolor.reset)
+term_reset()
