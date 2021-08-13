@@ -45,3 +45,12 @@ Hello {},
 how are you?
 """
 print(email.format(name))
+
+# using fprint and directly calling name var
+email = f"""
+Hello {name},
+how are you?
+some calc {2 + 12}
+some concat {name + str('2') + str(12)}
+"""
+print(email)
