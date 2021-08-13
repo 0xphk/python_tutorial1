@@ -130,3 +130,13 @@ for i in totals:
     print(i)
 
 print()
+
+# explicitly define datatype for method return value
+def hello() -> str:
+    return "hello"
+
+def number() -> float:
+    return 3.14159
+
+print(hello())
+print(number())
