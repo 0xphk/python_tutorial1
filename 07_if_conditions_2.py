@@ -38,8 +38,8 @@ else:
     print("\nisosceles triangle\n")
 
 # ternary if conditions / statements
-# some sort of inline conditions, used in another exercise
-# for example assign default value to input() if no input was given
+# some sort of inline condition, used in another exercise
+# only if else, no elif in ternary if statements
 number = 10
 
 # simple if statement
@@ -48,6 +48,6 @@ if number > 0:
 else:
     print('negative')
 
-# ternary if statement, same as above but shorter
-message = 'positive' if number > 0 else 'negative'
+# ternary if statement, same as above but shorter, no elif
+message = 'positive' if number > 0 else '0 or negative'
 print(message)
