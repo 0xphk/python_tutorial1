@@ -13,3 +13,5 @@ Channel: Programming with Mosh - Python for Beginners
 Channel: Programmieren starten - Python Tutorial deutsch (24 part series)
 
 `https://www.youtube.com/playlist?list=PL_pqkvxZ6ho3u8PJAsUU-rOAQ74D0TqZB`
+
+todo: move explicit types from collections to named_index
