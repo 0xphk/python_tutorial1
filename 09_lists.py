@@ -108,12 +108,14 @@ letters.reverse()
 print('concatenate reversed lists')
 print(numbers + letters)
 
-# mosh - list ranges still confusing to me
+# mosh - list ranges still confusing
 print()
 list = ['John','Bob','Mary','Jane','Mosh']
 print(list)
-# again, range does not include the last given index
-# range end is always range+1 even this index does not exist
+# again, range does not include the last element
+# range starts with index, but 2nd attr is not an index, it is more of a count value?
+# so basically start at index[0] and count index+next_x_elements until count reached [0:5]?
+# index starts at 0, count starts at index 0 but starting with 1
 print(list[0:4])
 # same as above, added step attr
 print(list[0:4:1])
@@ -121,9 +123,36 @@ print(list[0:4:1])
 # weird behavior, looks like you can not get a whole list as range
 # -1 prints 'mosh' 0 prints 'John' range [0:-1] excludes last element too
 print(list[0:-1:1])
-# inverse range does not work too
-#print(list[-1:-4:1])
-#print(list[-1:0])
+# print list[0:4] does not alter original list but creates an intermediate list on the fly
 
-# explicitly call non_existing index 5 works?, wtf is this sh*t?
-print(list[0:6:1])
+# list methods append, insert after index
+numbers = [1,2,3,4,5]
+print(numbers)
+# append 6
+numbers.append(6)
+print(numbers)
+# insert at index 0 int 0
+numbers.insert(0, 0)
+print(numbers)
+# boolean expression - return bool if 1 is in list | 10 is in list
+print(1 in numbers)
+print(10 in numbers)
+# get number of elements in list as length in numbers
+print(len(numbers))
+print('iterate')
+# iterate through elements, print
+for element in numbers:
+    print('for element in var',element)
+# same but not storing list as var
+for element in range(5):
+    print('for range(5)',element)
+
+# same result but more complex
+i = 0
+while i < len(numbers):
+    print(numbers[i])
+    i += 1
+
+# range object, 0 to 5 but exclude 5
+numbers = range(5)
+print(range)
