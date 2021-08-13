@@ -4,19 +4,20 @@
 [Python3: List vs Tuple vs Set vs Dictionary]
 https://blog.softhints.com/python-list-vs-tuple-vs-dictionary-vs-set/
 
-Lists:  for ordered collection of items or sequence of objects,
-        indexed, _not_ hashable
+Lists:  for ordered collection of items or sequence of objects, var = [1, 2, '3']
+[]      indexed, _not_ hashable
 
-Tuples: can be considered as immutable list,
-        elements can't be added, removed or replaced after declaration,
-        hashable, _not_ indexed
+Tuples: can be considered as immutable list, var = (1, '2', 3.14) or var = 1, '2', 3.14
+()      elements can't be added, removed or replaced after declaration,
+        only index() and count() method,
+        immutable, ordered, hashable, _not_ indexed
 
-Sets:   unique list w/o order and duplicates,
-        fast + union/intersection operations/methods,
+Sets:   unique list w/o order and duplicates, var = set()
+set()   fast + union/intersection operations/methods,
         not hashable
 
-Dict:   pair of key and values,
-        requires lookup by key or value,
+Dict:   pair of key and values, var = {'key1':value,...}
+{}      requires lookup by key or value,
         every key requires a value,
         values can be added, removed or modified values of dictionaries,
         indexed keys, no ordering
