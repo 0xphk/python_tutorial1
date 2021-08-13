@@ -81,3 +81,19 @@ price = 25
 print(price > 10 and price < 30)
 # same but shorter
 print(price < 30 > 10)
+
+# compare input
+weight = int(input('weight:'))
+unit = input('(K)g or (L)bs:')
+if unit == "K" or unit == "k":
+    unit = "Kg"
+    unit_conv = "Lbs"
+    print('weight in Kg:\t',weight,unit)
+    weight_conv = weight / 0.45
+    print('weight in Lbs:\t',weight_conv,unit_conv)
+elif unit == "L" or unit == "l":
+    unit = "Lbs"
+    unit_conv = "Kg"
+    print('weight in Lbs:\t',weight,unit)
+    weight_conv = weight * 0.45
+    print('weight in Kg:\t',weight_conv,unit_conv)
