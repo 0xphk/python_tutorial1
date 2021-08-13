@@ -27,10 +27,9 @@ age = 2021 - int(birth_year)
 if int(birth_month) < int(current_month):
     age += 1
 print('you are currently: ',str(age).strip(),'years old!')
-print('reset term in 2s ...',end=' ',sep='')
+print('reset term in 1s ...',end=' ',sep='')
 print(color.DARKCYAN)
-#sleep(5)
-spinit(5)
+spinit(4)
 print(color.END)
 term_reset()
 
@@ -40,9 +39,9 @@ First = 10.1
 Second = 20
 Sum = First + float(Second)
 print('First:\t',First,'\t',type(First),'\nSecond:\t',Second,'\t',type(Second),'\nSum:\t',Sum,'\t',type(Sum))
-print('reset term in 3s ...',end=' ',sep='')
+print('reset term in 1s ...',end=' ',sep='')
 print(color.DARKCYAN)
-spinit(10)
+spinit(4)
 print(color.END)
 term_reset()
 
@@ -58,12 +57,11 @@ print('replace lowercase "ython" to uppercase:',course.replace('ython', 'YTHON')
 
 # check for parts of str(), return bool
 print('is "Python" part of str(course):','Python' in course)
-print('reset term in 3s ...',end=' ',sep='')
+print('reset term in 1s ...',end=' ',sep='')
 print(color.DARKCYAN)
-spinit(10)
+spinit(4)
 print(color.END)
 term_reset()
-
 
 # arithmetic operators
 print(color.BOLD,color.DARKCYAN,"Python for Beginners by mosh - Arithmetic operators",color.END,sep='',end='\n')
@@ -75,27 +73,44 @@ print('Exponent x^n: 10 ** 3 = ',10 ** 3)
 print('Division(float): 10 / 3 = ',10 / 3)
 print('Division(int): 10 // 3 = ',10 // 3)
 print('Division(remainder): 10 % 3 = ',10 % 3)
+print('reset term in 1s ...',end=' ',sep='')
+print(color.DARKCYAN)
+spinit(4)
+print(color.END)
+term_reset()
 
 # logical operators
+print(color.BOLD,color.DARKCYAN,"Python for Beginners by mosh - Logical operators",color.END,sep='',end='\n')
 price = 25
-print(price > 10 and price < 30)
+print('\nprice is:',price)
+print('is price >10 and <30? :',price > 10 and price < 30)
 # same but shorter
-print(price < 30 > 10)
+print('is price < 30 > 10? :',price < 30 > 10)
+print('reset term in 1s ...',end=' ',sep='')
+print(color.DARKCYAN)
+spinit(4)
+print(color.END)
+term_reset()
 
 # convert weight from input
-weight = int(input('weight:'))
-unit = input('(K)g or (L)bs:')
-if unit.upper() == "K":  # same as below but shorter
-# if unit == "K" or unit == "k":
+print(color.BOLD,color.DARKCYAN,"Python for Beginners by mosh - Weight conversion",color.END,sep='',end='\n')
+weight = int(input('\nenter weight :\t'))
+unit = input('(K)g or (L)bs :\t')
+if unit.upper() == "K":  # shorter instead of [if unit == "K" or unit == "k":]
     unit = "Kg"
     unit_conv = "Lbs"
-    print('weight in Kg:\t',weight,unit)
+    # better formatting by concatenate strings instead of [print('weight in Kg :\t',weight,unit)]
+    print('weight in Kg :\t' + str(weight) + unit)
     weight_conv = weight / 0.45
-    print('weight in Lbs:\t',weight_conv,unit_conv)
-elif unit.upper() == "L":  # same as below
-# elif unit == "L" or unit == "l":
+    print('weight in Lbs :\t' + str(weight_conv) + unit_conv)
+elif unit.upper() == "L":
     unit = "Lbs"
     unit_conv = "Kg"
-    print('weight in Lbs:\t',weight,unit)
+    print('weight in Lbs :\t' + str(weight) + unit)
     weight_conv = weight * 0.45
-    print('weight in Kg:\t',weight_conv,unit_conv)
+    print('weight in Kg :\t' + str(weight_conv) + unit_conv)
+
+if weight > 100 and unit == "Kg":
+    print("maybe it's time for some diet...")
+elif weight < 70 and unit == "Kg":
+    print("you should eat something...")
