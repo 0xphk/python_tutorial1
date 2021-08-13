@@ -1,6 +1,7 @@
 # coding w/ mosh: python in 1h [https://www.youtube.com/watch?v=kqtD5dpn9C8]
 from modules import color, term_reset, spinit
 from time import sleep
+
 term_reset()
 print(color.BOLD,color.DARKCYAN,"Python for Beginners by mosh - Inputs",color.END,sep='',end='\n')
 sleep(1)
@@ -94,8 +95,10 @@ term_reset()
 
 # convert weight from input
 print(color.BOLD,color.DARKCYAN,"Python for Beginners by mosh - Weight conversion",color.END,sep='',end='\n')
-weight = int(input('\nenter weight :\t'))
-unit = input('(K)g or (L)bs :\t')
+# weight = int(input('\nenter weight :\t'))
+# unit = input('(K)g or (L)bs :\t')
+weight = 170
+unit = "l"
 if unit.upper() == "K":  # shorter instead of [if unit == "K" or unit == "k":]
     unit = "Kg"
     unit_conv = "Lbs"
@@ -114,3 +117,17 @@ if weight > 100 and unit == "Kg":
     print("maybe it's time for some diet...")
 elif weight < 70 and unit == "Kg":
     print("you should eat something...")
+
+print('reset term in 1s ...',end=' ',sep='')
+print(color.DARKCYAN)
+spinit(4)
+print(color.END)
+term_reset()
+print(color.BOLD,color.DARKCYAN,"Python for Beginners by mosh - while loop, print expression",color.END,sep='',end='\n')
+i = 1
+# 1_000 provides better readable numbers
+while i <= 10:
+    # multiply i by str(), allows to print expression, increment count of str() on every iteration
+    print(i * '*')
+    i += 1
+    sleep(0.1)
