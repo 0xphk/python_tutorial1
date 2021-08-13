@@ -37,3 +37,11 @@ while i < 10:
     i += 1
     y = x.expandtabs(i)
     print(i,y)
+
+# format using positional args (again^^)
+name = "Dude"
+email = """
+Hello {},
+how are you?
+"""
+print(email.format(name))
