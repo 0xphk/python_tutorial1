@@ -54,3 +54,8 @@ some calc {2 + 12}
 some concat {name + str('2') + str(12)}
 """
 print(email)
+
+# print str repr of numbers in reverse order using [::-1]
+# slice str starting at the end of the string and move backwards.
+numbers = [1,2,3,4,5,7,6,8]
+print(str(numbers)[::-1])
