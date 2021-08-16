@@ -28,3 +28,14 @@ for number in numbers:
     result += number
 
 print(result)
+
+# break and continue keywords in for loops
+for n in [1,2,3,4,5,6,7,8,9]:
+    if n < 5:
+        continue
+    print(n)
+
+for n in [1,2,3,4,5,6,7,8,9]:
+    if n == 5:
+        break
+    print(n)
