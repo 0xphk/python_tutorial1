@@ -21,3 +21,16 @@ def isAdult(age):
     return age >= 18
 
 print(isAdult(21))
+
+# return string after comparison
+def isGender(gender='unknown'):
+    if gender.upper() == "M":
+        return 'Male'
+    elif gender.upper() == "F":
+        return "Female"
+    else:
+        return gender
+
+print(isGender('m'))
+print(isGender('f'))
+print(isGender('x'))
