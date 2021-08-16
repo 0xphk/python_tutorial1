@@ -135,7 +135,7 @@ print('set2:',lettersSET2)
 lettersUNION = lettersSET1 | lettersSET2
 # intersection w/ logical operator (elements in both sets )
 lettersINTERSECTION = lettersSET1 & lettersSET2
-# difference w/ logical operator 
+# difference w/ logical operator
 lettersDIFF = lettersSET1 - lettersSET2
 
 print('union: using logical operator "|"',lettersUNION)
