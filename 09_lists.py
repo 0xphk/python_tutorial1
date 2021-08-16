@@ -14,7 +14,7 @@ Tuples: can be considered as immutable list, var = (1, '2', 3.14) or var = 1, '2
         immutable, ordered, hashable, _not_ indexed
 
 Sets:   unique list w/o order and duplicates, var = set()
-set()   fast + union/intersection operations/methods,
+set()   fast + union/intersection/diff operations/methods,
         not hashable
 
 Dict:   pair of key and values, var = {'key1':value,...}
@@ -207,3 +207,11 @@ numbers.insert(2, 3)
 numbers.insert(8, 10)
 numbers.insert(0, 0)
 print(numbers)
+
+# list vs set
+numbersLIST = [1, 1, 2]
+numbersSET = {1, 1, 2}
+lettersSET = {'A','A','B','C','C'}
+print('NUM_LIST: ordered, w/ dupes',numbersLIST)
+print('NUM_SET: unordered, no dupes',numbersSET)
+print('LET_SET: unordered, no dupes',lettersSET)
