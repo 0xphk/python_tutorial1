@@ -5,7 +5,8 @@
 https://blog.softhints.com/python-list-vs-tuple-vs-dictionary-vs-set/
 
 Lists:  for ordered collection of items or sequence of objects, var = [1, 2, '3']
-[]      indexed, _not_ hashable
+[]      methods: append,count,insert,reverse,clear,extend,pop,sort,copy,index,remove
+        indexed, _not_ hashable
 
 Tuples: can be considered as immutable list, var = (1, '2', 3.14) or var = 1, '2', 3.14
 ()      elements can't be added, removed or replaced after declaration,
@@ -161,5 +162,48 @@ while i < len(numbers):
 # range object, 0 to 5 but exclude 5
 numbers = range(5)
 print(range)
-term_reset(30)
+term_reset(2)
+print(numbers)
+
+# sort, reverse method
+numbers = [1,2,3,4,5,7,6,8]
+# has to be called explicitly, print(numers.reverse()) does _NOT_ work
+numbers.sort()
+print(numbers)
+
+numbers.reverse()
+print(numbers)
+
+# remove+print removed element at index n(0) using pop(n)
+# pop() w/o argument starts removing elements from top of list [ bottom_of_list, x ,y, z, top_of_list ]
+numbers.reverse()
+print(numbers)
+print(numbers.pop(0))
+print(numbers)
+print(numbers.pop(0))
+print(numbers)
+print(numbers.pop(0))
+print('pop elements from list from top to bottom, two times, called two times')
+print('list before: ',numbers)
+print('call numbers.pop()',numbers.pop())
+print('call numbers.pop() again',numbers.pop())
+print('list after popping two elements: ',numbers)
+
+# append data at end of list
+numbers.append(1000)
+print(numbers)
+ext = [1001, 1002, 1003]
+# merge lists, extend numbers [list] with additional list [ext]
+numbers.extend(ext)
+print(numbers)
+
+# insert single element x at index n numbers.insert(x, n)
+
+numbers.insert(0, 1)
+print(numbers)
+numbers.insert(1, 2)
+print(numbers)
+numbers.insert(2, 3)
+numbers.insert(8, 10)
+numbers.insert(0, 0)
 print(numbers)
