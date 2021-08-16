@@ -4,7 +4,15 @@ from time import sleep
 from subprocess import call
 
 # reset terminal using subprocess.call()
-def term_reset():
+def term_reset(i=1):
+    """reset terminal after given n seconds,
+    uses spinit(j) spinning effect, expects int"""
+    # two chars about 1s, default
+    j = i * 2
+    print(f'reset term in {i}s ...',end=' ',sep='')
+    print(ansicolor.fg.lightcyan)
+    spinit(j)
+    print(ansicolor.reset)
     _ = call('reset')
 
 # strings to hex representation
