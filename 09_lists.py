@@ -24,6 +24,7 @@ Dict:   pair of key and values, var = {'key1':value,...}
 """
 
 # list indexes
+from modules import term_reset
 from operator import itemgetter
 
 # define array
@@ -160,3 +161,5 @@ while i < len(numbers):
 # range object, 0 to 5 but exclude 5
 numbers = range(5)
 print(range)
+term_reset(30)
+print(numbers)
