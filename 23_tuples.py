@@ -5,7 +5,8 @@
 https://blog.softhints.com/python-list-vs-tuple-vs-dictionary-vs-set/
 
 Lists:  for ordered collection of items or sequence of objects, var = [1, 2, '3']
-[]      indexed, _not_ hashable
+[]      methods: append,count,insert,reverse,clear,extend,pop,sort,copy,index,remove
+        indexed, _not_ hashable
 
 Tuples: can be considered as immutable list, var = (1, '2', 3.14) or var = 1, '2', 3.14
 ()      elements can't be added, removed or replaced after declaration,
@@ -13,7 +14,7 @@ Tuples: can be considered as immutable list, var = (1, '2', 3.14) or var = 1, '2
         immutable, ordered, hashable, _not_ indexed
 
 Sets:   unique list w/o order and duplicates, var = set()
-set()   fast + union/intersection operations/methods,
+set()   fast + union/intersection/diff operations/methods,
         not hashable
 
 Dict:   pair of key and values, var = {'key1':value,...}
