@@ -130,7 +130,20 @@ lettersSET1 = {'A','F','B','C','C'}
 lettersSET2 = {'A','G','B','C','C'}
 print('set1:',lettersSET1)
 print('set2:',lettersSET2)
-print('union: set1.union(set2)',lettersSET1.union(lettersSET2))
+
+# union w/ logical operator (content of both sets{})
+lettersUNION = lettersSET1 | lettersSET2
+# intersection w/ logical operator (elements in both sets )
+lettersINTERSECTION = lettersSET1 & lettersSET2
+# difference w/ logical operator 
+lettersDIFF = lettersSET1 - lettersSET2
+
+print('union: using logical operator "|"',lettersUNION)
+print('method union() set1.union(set2)',lettersSET1.union(lettersSET2))
+
+print('intersection using logical operator "&"',lettersSET1.intersection(lettersSET2))
+print('method intersection() set1.intersection(set2) elements in both sets',lettersSET1.intersection(lettersSET2))
+
+print('difference: using logical operator "-"',lettersDIFF)
 print('difference: set1.diff(set2)',lettersSET1.difference(lettersSET2))
-print('difference: set2.diff(set1)',lettersSET2.difference(lettersSET1))
-print('intersection: set1.intersection(set2) elements in both sets',lettersSET1.intersection(lettersSET2))
+print('reverse difference() set2.diff(set1)',lettersSET2.difference(lettersSET1))
