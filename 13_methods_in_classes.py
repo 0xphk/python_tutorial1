@@ -140,3 +140,18 @@ def number() -> float:
 
 print(hello())
 print(number())
+
+# recall w/ amigoscode
+class Phone:
+    def __init__(self, brand, price):
+        self.brand = brand
+        self.price = price
+
+    def call(self, phoneNumber):
+        print(f"{self.brand} is calling {phoneNumber}")
+
+android = Phone('oneplus',600)
+
+print(android)
+print(android.brand)
+android.call(999)
