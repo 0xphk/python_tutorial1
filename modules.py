@@ -22,14 +22,27 @@ def trst(i=1,msg=''):
     uses spinit(j) spinning effect, expects int"""
     # two chars about 1s, default
     j = i * 2
-    n = i
-    while n > 0 or n == i:
-        n -= 1
-    # spinner end of line
-    print(f'\n{msg}\n>>> reset term in {n}s ...  ',end='\b',sep='')
+    print(f'\n{msg}\n>>> reset term in {i}s ...  ',end='\b',sep='')
     spinit(j)
     print(ansicolor.reset)
     _ = call('reset')
+
+    # spinner end of line
+    #print(f'\n{msg}\n>>> reset term in {next(counter)} {n}s ...  ',end='\b',sep='')
+    #spinit(j)
+    #print(ansicolor.reset)
+    #_ = call('reset')
+
+    # counter does not work
+    # def count():
+    #     for counter in range(1, i):
+    #         yield counter
+    # # counter + spinner
+    # counter = count()
+    # sys.stdout.write(next(counter))
+    # sys.stdout.flush()
+    # sleep(0.5)
+    # sys.stdout.write('\b')
 
 # reset only
 def treset():
