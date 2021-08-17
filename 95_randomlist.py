@@ -7,7 +7,7 @@ rot13 = bytes.maketrans(
     b"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM")
 
 count = 0
-while count < 100:
+while count < 99:
     count += 1
     rint = random.randint(1000, 9999)
     rhex1 = random.randbytes(4).hex()
@@ -23,4 +23,12 @@ print('rthead:',rthead,len(rthead),type(rthead))
 
 # verify str.len(), rand_list.__len__()
 print('rstr.len():',len(rstr),'\nrand_list.__len__():',rlist.__len__())
-print('list:',rlist,sep='\n')
+
+# print('list:',rlist,sep='\n')
+
+count = 0
+while count < 10:
+    # get 10 random items from list
+    count += 1
+    rlistItem = random.randint(1,99)
+    print('index:',rlistItem,rlist[rlistItem])
