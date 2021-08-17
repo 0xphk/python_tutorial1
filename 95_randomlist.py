@@ -2,7 +2,7 @@ from modules import strhx
 import random
 
 rlist = []
-rot13 = bytes.maketrans(
+rotate = bytes.maketrans(
     b"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
     b"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM")
 
@@ -14,21 +14,21 @@ while count < 99:
     rhex2 = random.randbytes(4).hex()
     rstr = str(rhex1 + str(rint) + rhex2)
     rlist.append(rstr)
-rhead = 'totally_random_stuff'
-rthead = strhx(rhead.translate(rot13))
+rhead = 'not!_so_random_stuff'
+rthead = strhx(rhead.translate(rotate))
 rlist.insert(0,rthead)
 
-print('rhead:',rhead,len(rhead),type(rhead))
-print('rthead:',rthead,len(rthead),type(rthead))
-
-# verify str.len(), rand_list.__len__()
-print('rstr.len():',len(rstr),'\nrand_list.__len__():',rlist.__len__())
-
-# print('list:',rlist,sep='\n')
+# verify value, str.len(), rand_list.__len__()
+print('>>> list:',rlist,sep='\n')
+print('>>> rhead:',rhead,len(rhead),type(rhead))
+print('>>> rthead:',rthead,len(rthead),type(rthead))
+print('>>> rstr.len():',len(rstr),'\n>>> rand_list.__len__():',rlist.__len__())
+print('>>> 10 random items from rlist\n')
 
 count = 0
 while count < 10:
-    # get 10 random items from list
+    # get 10 random items from list, dupes possible, fix this!
     count += 1
     rlistItem = random.randint(1,99)
-    print('index:',rlistItem,rlist[rlistItem])
+    # add leading zero to single-figure number index using fstring{int:02d}
+    print(f'index: {rlistItem:02d} {rlist[rlistItem]}')
