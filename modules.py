@@ -50,7 +50,6 @@ def treset():
     _ = call('reset')
 
 # progress spinner using generator w/ some help from [https://stackoverflow.com/a/4995896]
-# def spinit():
 def spinit(n=9):
     # create generator, note keyword 'yield' instead of 'return'
     def spin():
@@ -60,8 +59,6 @@ def spinit(n=9):
     spinner = spin()
     # initial value = 2 spins
     for i in range(1,n):
-        # print('>>>',end=' ',sep='')
-        # print(str(i),'',end='',sep='\r')
         sys.stdout.write(next(spinner))
         sys.stdout.flush()
         sleep(0.5)
@@ -70,8 +67,6 @@ def spinit(n=9):
 # strings to hex representation
 def strhx(i):
     """returns hex value for given input - expects str()"""
-    # prints 2 times?
-    # print(i)
     ie = i.encode("utf-8").hex()
     return ie
 # print(strhx.__doc__)
