@@ -4,16 +4,55 @@ from time import sleep
 from subprocess import call
 
 # reset terminal using subprocess.call()
-def term_reset(i=1):
+def term_reset(i=1):  # requires fixing some older tutorials due to added spinit
     """reset terminal after given n seconds,
     uses spinit(j) spinning effect, expects int"""
     # two chars about 1s, default
     j = i * 2
     print(f'reset term in {i}s ...',end=' ',sep='')
+    # spinner newline
     print(ansicolor.fg.lightcyan)
+    spinit(int(j))
+    print(ansicolor.reset)
+    _ = call('reset')
+
+# default w/ msg
+def trst(i=1,msg=''):
+    """reset terminal after given n seconds w/ optional msg,
+    uses spinit(j) spinning effect, expects int"""
+    # two chars about 1s, default
+    j = i * 2
+    n = i
+    while n > 0 or n == i:
+        n -= 1
+    # spinner end of line
+    print(f'\n{msg}\n>>> reset term in {n}s ...  ',end='\b',sep='')
     spinit(j)
     print(ansicolor.reset)
     _ = call('reset')
+
+# reset only
+def treset():
+    """reset terminal immediately"""
+    _ = call('reset')
+
+# progress spinner using generator w/ some help from [https://stackoverflow.com/a/4995896]
+# def spinit():
+def spinit(n=9):
+    # create generator, note keyword 'yield' instead of 'return'
+    def spin():
+        while True:
+            for cursor in '|/-\\':
+                yield cursor
+    spinner = spin()
+    # initial value = 2 spins
+    for i in range(1,n):
+        # print('>>>',end=' ',sep='')
+        # print(str(i),'',end='',sep='\r')
+        sys.stdout.write(next(spinner))
+        sys.stdout.flush()
+        sleep(0.5)
+        sys.stdout.write('\b')
 
 # strings to hex representation
 def strhx(i):
@@ -64,24 +103,6 @@ def now():
 def nowf():
     format = "%Y%m%dT%H%M%SZ"
     return now().strftime(format)
-
-# progress spinner using generator w/ some help from [https://stackoverflow.com/a/4995896]
-# def spinit():
-def spinit(n=9):
-    # create generator, note keyword 'yield' instead of 'return'
-    def spin():
-        while True:
-            for cursor in '|/-\\':
-                yield cursor
-    spinner = spin()
-    # initial value = 2 spins
-    for i in range(1,n):
-        # print('>>>',end=' ',sep='')
-        # print(str(i),'',end='',sep='\r')
-        sys.stdout.write(next(spinner))
-        sys.stdout.flush()
-        sleep(0.5)
-        sys.stdout.write('\b')
 
 # custom color output
 class color:
