@@ -1,5 +1,10 @@
-from modules import strhx
+from modules import strhx, trst, treset, ansicolor
 import random
+
+treset()
+
+print(ansicolor.fg.lightcyan,'''\nSelect 10 random elements from dynamic created list "rlist"
+do not allow index 0 or any duplicates''',ansicolor.reset)
 
 rotate = bytes.maketrans(
     b"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -26,17 +31,23 @@ rlist.insert(0,rthead)
 # intermediate list to keep track of usedItems
 rlistUsed = []
 rlistUsed.extend(rlist)
+
+# use set() here so we don't have duplicates
 usedItems = set()
 usedIndex = set()
 
-print('''\n>>> Select 10 random elements from dynamic list "rlist"
->>> do not allow index 0 or any duplicates\n''')
+# does not work, msg not respected in trst()
+trst(4,'preparing lists w/ 20chr random data string\n')
 
 # debug: verify value, str.len(), rand_list.__len__()
-# print('>>> list:',rlist,sep='\n')
-# print('>>> rhead:',rhead,len(rhead),type(rhead))
-# print('>>> rthead:',rthead,len(rthead),type(rthead))
-# print('>>> rstr.len():',len(rstr),'\n>>> rlist.__len__():',rlist.__len__())
+print('>>> list: {rlist}',rlist,sep='\n\n')
+print('\n>>> rhead:',rhead,len(rhead),type(rhead))
+print('>>> rthead:',rthead,len(rthead),type(rthead))
+print('>>> rstr.len():',len(rstr),'\n>>> rlist.__len__():',rlist.__len__())
+
+trst(10,'randomly choose 10 elements\n')
+
+print('>>> the choosen ones\n')
 
 count = 0
 while count < 10:
@@ -61,13 +72,13 @@ while count < 10:
     rlistUsed.remove(rlistItem)
 
     print(f'index: {rlistIndex:02d} {rlistItem}')
-    
+
     # randchoice - better use randint as choice can not blacklist index
     # rlistItem = random.choice(rlist)  # includes index 0
     # rlistIndex = rlist.index(rlistItem)
     # print(f'index: {rlistIndex:02d} {rlistItem}')
     # rlistUsed.remove(rlistItem)
-    
+
     # randint
     # rlistItem = random.randint(1,99)
     # add leading zero to single-figure number index using fstring{int:02d}
@@ -75,7 +86,7 @@ while count < 10:
     # print(f'index: rlistItem {rlistItem} {rlist[rlistItem]}')
 
 # print(usedItems)
-print(f'\n>>> used indices:\n{usedIndex}')
+print(f'\n>>> used indices, not ordered:\n{usedIndex}')
 
 # print(rlistUsed)
 
