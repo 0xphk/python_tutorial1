@@ -1,6 +1,7 @@
 from modules import strhx, trst, treset, ansicolor
 import random
 
+# reset term
 treset()
 
 print(ansicolor.fg.lightcyan,'''\nSelect 10 random elements from dynamic created list "rlist"
@@ -36,7 +37,7 @@ rlistUsed.extend(rlist)
 usedItems = set()
 usedIndex = set()
 
-# does not work, msg not respected in trst()
+# term reset after 4s w/ msg
 trst(4,'preparing lists w/ 20chr random data string\n')
 
 # debug: verify value, str.len(), rand_list.__len__()
