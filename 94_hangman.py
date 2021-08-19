@@ -1,6 +1,8 @@
-# based on freecodecamp 12 python beginner projects
+# based on freecodecamp 12 python beginner project: hangman
 # [https://www.youtube.com/watch?v=8ext9G7xspg]
 # [https://github.com/kying18/hangman]
+#
+# added difficulty options, modified visuals
 
 from words import words
 from modules import treset
