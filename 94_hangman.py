@@ -23,10 +23,6 @@ def get_valid_word(words):
 
 def hangman():
     word = get_valid_word(words)
-
-    # debug
-    # print(word)
-
     word_letters = set(word)
     alphabet = set(string.ascii_uppercase)
     used_letters = set()
@@ -36,47 +32,47 @@ def hangman():
     # no need for dual input() if difficulty is set to str() before while loop
     # difficulty = input('Enter difficulty: (E)asy, (D)ynamic, (K) or (S)oulslike? : ')
 
-    # while (difficulty.upper() != 'E') or (difficulty.upper() != 'D') or (difficulty.upper() != 'K') or (difficulty.upper() != 'S'):
+    # while (difficulty != 'E') or (difficulty != 'D') or (difficulty != 'K') or (difficulty != 'S'):
     # ^_ way too long, looks like this can be combined in one statement which is really nice
-    while difficulty.upper() != 'E' != 'D' != 'K' != 'S':
+    while difficulty != 'E' != 'D' != 'K' != 'S':
 
-        difficulty = input('Enter difficulty: (E)asy, (D)ynamic, (K) or (S)oulslike? : ')
+        difficulty = input('Enter difficulty: (E)asy, (D)ynamic, (K) or (S)oulslike? : ').upper()
 
-        if difficulty.upper() == 'E':
-            print(f"{difficulty.upper()} - Easy equals 10 lives")
+        if difficulty == 'E':
+            print(f"({difficulty})asy equals 10 lives")
             lives = 10
             break
 
-        elif difficulty.upper() == 'D':
-            print(f"{difficulty.upper()} - Dynamic lives based on word length")
+        elif difficulty == 'D':
+            print(f"({difficulty})ynamic lives based on word length")
             lives = len(word_letters)
             break
 
-        elif difficulty.upper() == 'S':
-            print(f"{difficulty.upper()} - Soulslike equals 1 live, happy dying!")
+        elif difficulty == 'S':
+            print(f"({difficulty})oulslike equals 1 live, happy dying!")
             lives = 1
             break
 
-        elif difficulty.upper() == 'K':
-            print(f"You ({difficulty.upper()})illed yourself !")
+        elif difficulty == 'K':
+            print(f"({difficulty})illed yourself !")
             lives = 0
             break
 
-        print('Invalid choice!')
+        print('Invalid choice !')
 
     while len(word_letters) > 0 and lives > 0:
-        # letters used as string ' '.join(['a', 'b', 'cd']) --> 'a b cd'
-
         # w/o visual
+        # letters used as string ' '.join(['a', 'b', 'cd']) --> 'a b cd'
         # print('Used letters : ', ' '.join(used_letters))
 
         # w/ visual
         print('You have', lives, 'lives left and used these letters : ', ' '.join(used_letters))
 
-        # current solve status ie (W - R D), letter defined in 'for letter in word' loop at eol
+        # current solve status ie (W - R D)
+        # variable "letter" defined in 'for letter in word' loop at eol
         word_list = [letter if letter in used_letters else '-' for letter in word]
 
-        # visual
+        # print visuals from dict below with "lives" as "key"
         print(lives_visual_dict[lives])
         print('Current word : ', ' '.join(word_list))
 
