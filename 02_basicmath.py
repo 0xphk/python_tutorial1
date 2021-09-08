@@ -46,16 +46,22 @@ print('result float as type int:',int(Calc.add(Calc.div(10,5),Calc.mul(100,10)))
 print()
 print('remainder of 10 / 3 = ',Calc.rdiv(10,3))
 print('8 to the power of 2 (8^2) = ',Calc.exp(8,2))
+print()
 
 # print primes between lower - upper
-lower = 900
-upper = 1000
+lower = int(input('enter lower: ' or 900))
+upper = int(input('enter upper: ' or 1000))
+
+print(f'print primes between {lower} and {upper}')
 
 for num in range(lower, upper + 1):
     # all primes are > 1
     if num > 1:
         for i in range(2, num):
+            # compare remainder
             if (num % i) == 0:
                 break
         else:
-            print(num)
+            # print primes
+            print(num, end=' ', sep='')
+print()
