@@ -48,6 +48,15 @@ if number > 0:
 else:
     print('negative')
 
+# set var to empty value
+number = False
+# check if var is not empty false if '' else true
+if number:
+    print('var is set and not empty')
+else:
+    print('var is set but empty')
+
+number = 10
 # ternary if statement, same as above but shorter, no elif
 message = 'positive' if number > 0 else '0 or negative'
 print(message)
