@@ -66,7 +66,7 @@ term_reset()
 
 # arithmetic operators
 print(color.BOLD,color.DARKCYAN,"Python for Beginners by mosh - Arithmetic operators",color.END,sep='',end='\n')
-print('Arithmetic operators:')
+print('''Arithmetic operators precedence: **,*,/,//,%,+,-''')
 print('Addition: 10 + 3 = ',10 + 3)
 print('Substraction: 10 - 3 = ',10 - 3)
 print('Multiplication: 10 * 3 = ',10 * 3)

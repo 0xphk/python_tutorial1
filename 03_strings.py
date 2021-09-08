@@ -59,3 +59,6 @@ print(email)
 # slice str starting at the end of the string and move backwards.
 numbers = [1,2,3,4,5,7,6,8]
 print(str(numbers)[::-1])
+
+# if multiply operator is used on strings it turns to string replication operator
+print(name * 5)

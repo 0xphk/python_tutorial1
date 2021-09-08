@@ -66,12 +66,16 @@ print("print(z.imag):", z.imag)
 # floating point numbers
 print("set e = 2.718281828")
 e = 2.718281828
-
 # get type
 print("get type:", type(e))
 
 # print float
 print("print(e):", e)
+print()
+
+# floats can start with zeros but are stripped when printed
+f = 000042.0002
+print("print(f):", f)
 print()
 
 # python2
@@ -125,3 +129,4 @@ a = 5
 b = 16
 print("a:", a, type(a), "\nb:", b, type(b), "\nprint(b / a)\n_result:", b / a, type(b / a))
 print()
+

@@ -15,13 +15,15 @@ var3 = (22 - 2) * 3
 
 # naming conventions
 name = "James"
-# underscore preferred over camelCase
+# underscore preferred over camelCase in PEP8
 full_name = "John James"
 # camelCase
 fullName = "John James"
 # uppercase for constants / fixed values
 PI = 3.14159
 E = 2.1718281828
+# can not start with number, so use underscore
+_42 = 42
 
 # explicitly define datatype for variable
 name: str = "John"
