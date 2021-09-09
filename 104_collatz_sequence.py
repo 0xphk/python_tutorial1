@@ -1,13 +1,14 @@
-# does not work yet
 import sys
+from modules import treset
 
-print()
+treset()
+
+print('computes collatz seq for given number\n')
 
 def collatz(number):
     while number != 1:
         if number % 2 == 0:
-            #number = number // 2
-            # same as above but shorter
+            # number = number // 2 or in short
             number //= 2
             print(number, end=' ')
             yield number
@@ -20,54 +21,28 @@ def collatz(number):
             yield number
 
 try:
-    try:
-        while True:
+    while True:
+        try:
             user = int(input('enter number: '))
-
             if user < 0:
                 print('no negative feelings please ...')
-                break
-
+                continue
             print('collatz seq: ', end='')
+            # this actually runs the collatz() function and i have not f*cking idea why
             list(collatz(user))
             print()
             break
-
-    # int() input validation
-    except ValueError:
-        print('not a number')
-
+        except ValueError:  # int() input validation
+            print('not a number')
 except KeyboardInterrupt:
     print()
     sys.exit()
 
-#try:
-#    while True:
-#        try:
-#            user = int(input('enter integer: '))
-#            
-#            if user < 0:
-#                print('only postive numbers')
-#            continue
-#
-#            list(collatz(user))
-#            print(list(collatz(user)))
-#        # int() input validation
-#        except ValueError:
-#            print('enter a number')
-#except KeyboardInterrupt:
-#    print('',end='\n')
-#    sys.exit()
-
 # should run it but it doesn't
-# collatz(user)
+#collatz(user)
 
-# works but i have no f*cking idea why
-#print('collatz seq: ', end='')
-#try:
-#    list(collatz(user))
-#except:
-#    print('did not work, try using integer')
+# this actually runs the function but i have not f*cking idea why
+#list(collatz(user))
 
 # runs function and prints list as well
 #print(list(collatz(user)))
