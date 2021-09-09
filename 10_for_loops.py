@@ -40,15 +40,19 @@ for n in [1,2,3,4,5,6,7,8,9]:
         break
     print(n)
 
+#################################
+# REALLY STRANGE BUG / WHATEVER #
+#################################
+# i dont get it, in plain shell it works as expected, wtf is wrong here
+# up = int(input('up: '))
+# TypeError: 'int' object is not callable'''
+
+# moving this code to seperate file it starts working wtf
+# up = int(input('up: '))
+# for r in range(up, -1, -1):
+#     print(r)
+
 # count backwards - works with var = int but not from str input typecasted to int??
 upper = 10
 for i in range(upper,-1,-1):
-    print(i)
-
-# i dont get it, in plain shell it works as expected, wtf is wrong here
-'''    up = int(input('up: '))
-TypeError: 'int' object is not callable'''
-
-up = int(input('up: '))
-for i in range(up,-1,-1):
     print(i)
