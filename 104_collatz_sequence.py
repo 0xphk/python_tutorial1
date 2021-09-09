@@ -3,17 +3,18 @@ import sys
 def collatz(number):
     while number != 1:
         if number % 2 == 0:
-            number = number // 2
+            #number = number // 2
+            # same as above but shorter
+            number //= 2
             print(number, end='')
-            # requires yield (some sort of updating value and return it to function?)
+            # requires yield - makes a generator out of this function
+            # some sort of updating value and return it to function?
             # instead of return which seems to exit function call
             yield number
-            #return number
         else:
             number = number * 3 + 1
             print(number, end='')
             yield number
-            #return number
 
 try:
     try:
