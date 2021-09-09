@@ -38,3 +38,25 @@ print(type(my_list))
 print(type(decimal))
 print(type(my_tuple))
 print(type(also_a_tuple))
+
+# local and global vars
+a = 10  # global variable
+a = str(a)
+def lvar1():
+    # manupilate global variables inside functions, value in global scope updates
+    global a
+    a = 9
+    a = str(a)
+    lvarContent = '1337'
+    b = 'b1'
+    lvar2()  # context destroyed after execution and lvarContent not returned, so value keeps the same
+    print(lvarContent + a + b + 'c')  # local + global var, can not use local var 'c' from lvar2
+
+def lvar2():
+    ''' still unused as local scope centext is detroyed after execution of function
+    same var can exist in different local scopes but they are always sperated '''
+    lvarContent = '1338'
+    c = 'c1'
+    print(lvarContent + a + 'b' + c)  # local + updated global var, can not use local var 'b' from lvar1
+
+lvar1()
