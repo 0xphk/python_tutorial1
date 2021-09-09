@@ -40,6 +40,11 @@ for n in [1,2,3,4,5,6,7,8,9]:
         break
     print(n)
 
+# count backwards - works with var = int but not from str input typecasted to int??
+upper = 10
+for i in range(upper,-1,-1):
+    print(i)
+
 #################################
 # REALLY STRANGE BUG / WHATEVER #
 #################################
@@ -47,12 +52,8 @@ for n in [1,2,3,4,5,6,7,8,9]:
 # up = int(input('up: '))
 # TypeError: 'int' object is not callable'''
 
-# moving this code to seperate file it starts working wtf
+# moving this code to seperate file or to top it starts working wtf
+# 10_for_wtf1.py 10_for_wtf2.py
 # up = int(input('up: '))
 # for r in range(up, -1, -1):
-#     print(r)
-
-# count backwards - works with var = int but not from str input typecasted to int??
-upper = 10
-for i in range(upper,-1,-1):
-    print(i)
+#    print(r)
