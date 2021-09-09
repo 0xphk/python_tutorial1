@@ -48,8 +48,10 @@ if number > 0:
 else:
     print('negative')
 
-# set var to empty value
+# set var to empty value, all seems to work
+number = None
 number = False
+number = int()
 # check if var is not empty false if '' else true
 if number:
     print('var is set and not empty')
