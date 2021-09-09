@@ -14,7 +14,7 @@ from modules import treset
 
 treset()
 
-print('computes collatz seq for given number\n')
+print('computes collatz seq [ (even) n // 2 || (odd) n * 3 + 1 ] for given number\n')
 
 def collatz(number):
     while number != 1:
@@ -28,7 +28,7 @@ def collatz(number):
                 - return statement seems to exit function call instead of returning value back to function
             """
         else:
-            number = number * 3 + 1
+            number = number * 3 + 1  # can not be shortened like (number *= 3 + 1) :(
             print(number, end=' ')
             yield number
 
