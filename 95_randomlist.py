@@ -37,8 +37,8 @@ rlistUsed.extend(rlist)
 usedItems = set()
 usedIndex = set()
 
-# term reset after 4s w/ msg
-trst(4,'preparing lists w/ 20chr random data string\n')
+# term reset after 10s w/ msg
+trst(10,'preparing lists w/ 20chr random data string\n')
 
 # debug: verify value, str.len(), rand_list.__len__()
 print('>>> list: {rlist}',rlist,sep='\n\n')
@@ -91,5 +91,5 @@ print(f'\n>>> used indices, not ordered:\n{usedIndex}')
 
 # print(rlistUsed)
 
-print('\n>>> used items removed from intermediate list: rlistUsed\n>>> rlistUsed.__len__():',rlistUsed.__len__())
+print('\n>>> used items removed from intermediate list: rlistUsed\n>>> rlistUsed.__len__():',rlistUsed.__len__(),rlistUsed)
 print('\n>>> original list untouched: rlist\n>>> rlist.__len__():',rlist.__len__())
