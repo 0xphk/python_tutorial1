@@ -32,12 +32,9 @@ b64_str = 'c29tZV9lbmNvZGVfdGV4dAo='
 # w/o comments
 if len(sys.argv) == 2:
   b64_arg = sys.argv[1]
-<<<<<<< Updated upstream
   print(f'>>> sys.argv[0] is the name of the script, like in bash "${0}", script_name: ', ansi.GB, sys.argv[0], ansi.NM, sep='', end='\n')
   print(f'>>> number of arguments: ', ansi.GB, len(sys.argv), ansi.NM, sep='', end='\n')
   print(f'>>> current arguments: ', ansi.GB, sys.argv, ansi.NM, sep='', end='\n')
-=======
->>>>>>> Stashed changes
   def decode_b64_arg(*args):
     decarg_bytes = base64.b64decode(b64_arg)
     return decarg_bytes.decode("utf-8")
@@ -46,10 +43,6 @@ else:
   def decode_b64(n):
     dec_b64_bytes = base64.b64decode(b64_str)
     return dec_b64_bytes.decode("utf-8")
-<<<<<<< Updated upstream
   print(f'>>> sys.argv condition not matching, ', ansi.RB, 'use hardcoded value!', ansi.NM, sep='', end='\n')
   print(f'>>> base64_var.decoded: ', ansi.GB, decode_b64(b64_str), ansi.NM, sep='', end='\n')
 
-=======
-  print(f"\n"'>>> base64_var.decoded: ', ansi.GB, decode_b64(b64_str), ansi.NM, sep='', end='\n')
->>>>>>> Stashed changes
