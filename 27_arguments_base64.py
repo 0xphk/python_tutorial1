@@ -1,11 +1,13 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import base64
 import sys
+import re
 
 class ansi:
   RB = '\x1b[1;31m'
-  GB = '\x1b[1;33m'
+  GB = '\x1b[1;36m'
   BD = '\x1b[1m'
   RS = '\x1b[0m'
 
@@ -30,11 +32,16 @@ b64_var = 'd2l0aCBncmVhdCBwb3dlciwgY29tZXMgZ3JlYXQgcmVzcG9uc2liaWxpdHkK'
 
 # w/o comments
 if len(sys.argv) == 2:
-  b64_arg = sys.argv[1]
-  def decode_b64_arg(*args):
-    b64_bytes = base64.b64decode(b64_arg)
-    return b64_bytes.decode("utf-8")
-  print(f"\n"'>>> base64_arg: ', ansi.GB, "\t", b64_arg, ansi.RS, "\n"'>>> base64_arg.decoded: ', ansi.GB, decode_b64_arg(sys.argv[1]), ansi.RS, sep='', end='\n')
+  if sys.argv[1] == "-h":
+    # remove path from script path in sys.argv[0], expecting re works like sed -r 's,\(/\.*/\)//' 
+    sys.argv[0] = re.sub(r'(/.*/)', '', sys.argv[0])
+    print(sys.argv[0], ' expects base64 encoded string as argument')
+  else:
+    b64_arg = sys.argv[1]
+    def decode_b64_arg(*args):
+      b64_bytes = base64.b64decode(b64_arg)
+      return b64_bytes.decode("utf-8")
+    print(f"\n"'>>> base64_arg: ', ansi.GB, "\t", b64_arg, ansi.RS, "\n"'>>> base64_arg.decoded: ', ansi.GB, decode_b64_arg(sys.argv[1]), ansi.RS, sep='', end='\n')
 else:
   def decode_b64(n):
     b64_bytes_dec = base64.b64decode(b64_var)
